@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindful Control & Resiliência | Portal Unificado de Autoajuda</title>
+  <meta name="description" content="Portal unificado de regulação de crise, resiliência ativa, tomada de decisão lógica, filosofia de vida e proteção da dignidade pessoal sob estresse.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background decorative glows -->
+  <div class="bg-glow bg-glow-primary"></div>
+  <div class="bg-glow bg-glow-secondary"></div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Sticky Header -->
+  <header>
+    <a href="#" class="logo" id="logo-el">
+      <div class="logo-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+      </div>
+      <span class="logo-text">Mindful Control</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#crisis-section" class="nav-link active" id="nav-crisis-btn">Protocolo de Crise</a>
+      <a href="#decision-section" class="nav-link" id="nav-decision-btn">Decisão Lógica</a>
+      <a href="#motivation-section" class="nav-link" id="nav-motivation-btn">Fisiologia & Foco</a>
+      <a href="#provocation-section" class="nav-link" id="nav-provocation-btn">Dignidade & Chat</a>
+      <a href="#philosophy-section" class="nav-link" id="nav-philosophy-btn">Filosofia de Vida</a>
+      <a href="#diary-section" class="nav-link" id="nav-diary-btn">Diário</a>
+    </nav>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- HERO SECTION: MANIFESTO DE AUTOAJUDA UNIFICADA -->
+    <section class="hero-manifesto-card glass-card">
+      <h1 class="manifesto-title">Mindful Control & Resiliência</h1>
+      <p class="manifesto-quote">
+        "A transformação da dor em combustível para a mudança e a recusa em aceitar o sofrimento como um destino definitivo são atitudes de enorme coragem. 
+        Encontrar um propósito na superação e decidir que uma crise não define o fim, mas sim um ponto de virada, é um dos recursos mentais mais poderosos para romper o ciclo da desesperança."
+      </p>
+      <div class="manifesto-badge">
+        Ferramentas integradas para momentos de crise, isolamento e escolhas pragmáticas.
+      </div>
+    </section>
+
+    <!-- SEÇÃO 1: PROTOCOLO DE CRISE (MOTIVOS PARA VIVER) -->
+    <section class="section-block active-section" id="crisis-section">
+      <div class="section-header">
+        <span class="section-tag">Ação Imediata</span>
+        <h2 class="section-title">Protocolo de Crise Imediata</h2>
+        <p class="section-subtitle">Para quando o sofrimento mental parecer insuportável e você preferir se isolar do mundo.</p>
+      </div>
+
+      <div class="pillars-layout">
+        
+        <!-- Pillar 1 -->
+        <div class="pillar-block glass-card">
+          <div class="pillar-header">
+            <span class="pillar-num">1</span>
+            <div class="pillar-title-group">
+              <span class="pillar-tag">Foco & Estímulo</span>
+              <h3 class="pillar-title">Quebrando a Visão de Túnel</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">
+            A sobrecarga do sistema nervoso cria um estrangulamento de foco. Resete a mente de forma mecânica imediata ou adie a dor.
+          </p>
+          <div class="pillar-tools-grid">
+            <div class="sub-card">
+              <h4 class="sub-card-title">❄️ Ruptura Sensorial de Emergência</h4>
+              <p class="sub-card-text">Lave o rosto com água gelada ou segure gelo nas mãos. O choque ativa o sistema parassimpático e desacelera o coração.</p>
+              <div class="timer-display-box">
+                <span class="timer-display-val" id="sensory-timer-val">30s</span>
+                <button class="btn btn-primary btn-sm" id="btn-start-sensory">Iniciar Choque Sensorial</button>
+              </div>
+            </div>
+            <div class="sub-card" style="border-left:2px solid var(--color-accent);">
+              <h4 class="sub-card-title">⏳ Adiar Decisões (Regra das 24h)</h4>
+              <p class="sub-card-text">Comprometa-se a não tomar nenhuma decisão definitiva ou atitude de dano no dia de hoje. Amanhã reavaliamos os fatos.</p>
+              <button class="btn btn-secondary btn-sm" id="btn-sign-promise" style="width:100%; margin-top:auto;">Assinar Compromisso de 24 Horas</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-block glass-card">
+          <div class="pillar-header">
+            <span class="pillar-num">2</span>
+            <div class="pillar-title-group">
+              <span class="pillar-tag">Direcionamento</span>
+              <h3 class="pillar-title">Canalizando a Frustração</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">Não abafe a dor ou raiva. Direcione essa energia como uma força de indignação e inconformismo contra o problema.</p>
+          <div class="pillar-tools-grid">
+            <div class="sub-card">
+              <h4 class="sub-card-title">🔥 A "Raiva Construtiva"</h4>
+              <p class="sub-card-text">Use o inconformismo. Escreva o que você recusa aceitar que vença você ou te paralise no dia de hoje.</p>
+              <div class="fuel-input-row" style="margin-top:auto;">
+                <input type="text" class="input-field" id="fuel-input" placeholder="Ex: Não aceito me curvar à autoderrota.">
+                <button class="btn btn-primary btn-sm" id="btn-save-fuel">Salvar</button>
+              </div>
+              <div class="active-fuel-display" id="active-fuel-display-el" style="display:none; margin-top:0.75rem;"></div>
+            </div>
+            <div class="sub-card">
+              <h4 class="sub-card-title">🎯 Micro-Ações de Controle</h4>
+              <p class="sub-card-text">Substitua a impotência por uma ação biológica de baixíssimo atrito no ambiente físico:</p>
+              <div class="checklist-box" style="margin-top:auto;">
+                <label class="check-label">
+                  <input type="checkbox" id="win-check-1">
+                  <span>Arrumei minha cama / travesseiro</span>
+                </label>
+                <label class="check-label">
+                  <input type="checkbox" id="win-check-2">
+                  <span>Bebi um copo d'água</span>
+                </label>
+                <label class="check-label">
+                  <input type="checkbox" id="win-check-3">
+                  <span>Lavei meu rosto e mãos</span>
+                </label>
+                <label class="check-label">
+                  <input type="checkbox" id="win-check-4">
+                  <span>Fiz um movimento físico intenso (15 polichinelos)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-block glass-card">
+          <div class="pillar-header">
+            <span class="pillar-num">3</span>
+            <div class="pillar-title-group">
+              <span class="pillar-tag">Ressignificação</span>
+              <h3 class="pillar-title">Desconstruindo o Sofrimento</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">O peso do sofrimento depende da forma de interpretação. Combata distorções absolutas e ressignifique.</p>
+          <div class="pillar-tools-grid">
+            <div class="sub-card">
+              <h4 class="sub-card-title">🧠 Rejeitar o Fatalismo</h4>
+              <p class="sub-card-text">Escreva uma frase fatalista e dolorosa da sua mente para quebrar generalizações catastróficas.</p>
+              <div class="reframing-input-box" style="margin-top:auto;">
+                <input type="text" class="input-field" id="reframing-input" placeholder="Ex: Nada dá certo para mim e eu sou um inútil.">
+                <button class="btn btn-primary btn-sm" id="btn-apply-reframing" style="width:100%; margin-top:0.5rem;">Reestruturar</button>
+              </div>
+              <div class="reframing-result-box" id="reframing-result-el" style="display:none; margin-top:0.75rem;">
+                <span class="reframing-lbl">Fato Focado e Técnico:</span>
+                <p class="reframing-val" id="reframing-result-text-el"></p>
+                <button class="btn btn-secondary btn-sm" id="btn-save-reframing" style="width:100%; margin-top:0.5rem;">Registrar Vitória</button>
+              </div>
+            </div>
+            <div class="sub-card" style="border-left:2px solid var(--color-primary-light);">
+              <h4 class="sub-card-title">🏔️ O Significado do Aprendizado</h4>
+              <p class="sub-card-text">A crise atual não representa um veredito existencial, mas sim o treinamento que forjará sua armadura.</p>
+              <div class="reflection-quote-box" id="reflection-quote-el">
+                "A crise atual não descreve quem você é. Ela é apenas a matéria-prima com a qual você esculpirá a sua versão mais forte."
+              </div>
+              <button class="btn btn-secondary btn-sm" id="btn-next-reflection" style="width:100%; margin-top:auto;">Refletir sobre Superação</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-block glass-card">
+          <div class="pillar-header">
+            <span class="pillar-num">4</span>
+            <div class="pillar-title-group">
+              <span class="pillar-tag">Isolamento Construtivo</span>
+              <h3 class="pillar-title">Válvula de Escape Sem Julgamentos</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">Quando não quiser falar com ninguém, purgue o turbilhão interno colocando a dor em palavras escritas, sem filtro.</p>
+          <div class="scribble-container">
+            <textarea class="scribble-input-field" id="scribble-textarea" placeholder="Descarregue sua dor, raiva ou exaustão aqui sem julgamentos..."></textarea>
+            <div class="scribble-footer">
+              <span class="scribble-info" id="scribble-char-count">0 caracteres</span>
+              <button class="btn btn-secondary" id="btn-clear-scribble">Queimar / Limpar Pensamentos</button>
+            </div>
+            <div class="scribble-explanation" id="scribble-ex-el" style="display:none; margin-top:1rem;">
+              <span style="color: var(--color-success); font-weight:700;">✓ Pensamentos colocados para fora:</span>
+              Você descarregou o fluxo abstrato. Ao escrever, você materializou o turbilhão da mente. Agora que o apagou, você pode começar a enxergá-lo de fora, sem deixá-lo preso em sua mente.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: TOMADA DE DECISÃO LÓGICA (WIZARD INTERATIVO) -->
+    <section class="section-block" id="decision-section">
+      <div class="section-header">
+        <span class="section-tag">Tomada de Decisão</span>
+        <h2 class="section-title">Guia de Decisão Sob Pressão</h2>
+        <p class="section-subtitle">Um roteiro guiado passo a passo para clarear escolhas confusas e agir logicamente.</p>
+      </div>
+
+      <div class="glass-card wizard-card">
+        <!-- Progress Indicator -->
+        <div class="wizard-steps-progress" id="wizard-progress-dots">
+          <span class="wizard-step-dot active">1</span>
+          <span class="wizard-step-dot">2</span>
+          <span class="wizard-step-dot">3</span>
+          <span class="wizard-step-dot">4</span>
+        </div>
+
+        <div class="wizard-content" style="margin-top:2rem;">
+          
+          <!-- Step 1: Breathing -->
+          <div class="wizard-step-panel active-panel" id="wizard-step-1">
+            <h3 class="wizard-panel-title">Passo 1: Pausa de Respiração Box Breathing (10s)</h3>
+            <p class="wizard-panel-desc">
+              Decidir com o coração acelerado impede a reflexão clara. Reduza os batimentos cardíacos agora. 
+              Inspire, segure e solte o ar acompanhando a animação circular abaixo:
+            </p>
+            <div class="breath-visualizer-box">
+              <div class="breath-circle" id="breath-circle-el">Pronto</div>
+              <div class="breath-instruction" id="breath-instruction-el">Clique abaixo para iniciar</div>
+              <button class="btn btn-primary" id="start-breath-btn" style="margin-top:1.5rem;">Iniciar Respiração</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Step definition -->
+          <div class="wizard-step-panel" id="wizard-step-2">
+            <h3 class="wizard-panel-title">Passo 2: Defina o Menor Passo Prático</h3>
+            <p class="wizard-panel-desc">
+              Reduza a complexidade. Não tente resolver a situação completa agora. 
+              Qual é o **menor e mais básico passo físico** que você pode dar na próxima meia hora?
+            </p>
+            <input type="text" class="input-field" id="clarity-input" placeholder="Ex: responder o email técnico, organizar os cadernos do módulo 1...">
+          </div>
+
+          <!-- Step 3: Worst Scenario -->
+          <div class="wizard-step-panel" id="wizard-step-3">
+            <h3 class="wizard-panel-title">Passo 3: Mapeie o Impacto Temporal do Pior Cenário</h3>
+            <p class="wizard-panel-desc">
+              Se tudo der totalmente errado no seu passo, qual o real impacto de tempo dessa falha na sua vida? 
+              Selecione o horizonte temporal realista abaixo:
+            </p>
+            <div class="worst-scenario-grid">
+              <div class="worst-scenario-option" data-value="1 dia">
+                <div class="worst-scenario-time">1 Dia</div>
+                <p>O impacto desaparece até amanhã de manhã. Consequência nula.</p>
+              </div>
+              <div class="worst-scenario-option" data-value="1 semana">
+                <div class="worst-scenario-time">1 Semana</div>
+                <p>Gera um incômodo leve temporário, mas contornável nos próximos dias.</p>
+              </div>
+              <div class="worst-scenario-option" data-value="6 meses">
+                <div class="worst-scenario-time">6 Meses</div>
+                <p>Exige um esforço de correção de médio prazo, mas sem ruína estrutural.</p>
+              </div>
+              <div class="worst-scenario-option" data-value="permanente">
+                <div class="worst-scenario-time">Permanente</div>
+                <p>Impacto definitivo. Exige cautela e proteção contra danos irreversíveis.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Logic Filters -->
+          <div class="wizard-step-panel" id="wizard-step-4">
+            <h3 class="wizard-panel-title">Passo 4: Filtro Lógico de Alternativas</h3>
+            <p class="wizard-panel-desc">
+              Adicione as opções de ação que você visualiza agora. Em seguida, descarte as que forem baseadas em orgulho/emoção pura e destaque a ideal.
+            </p>
+            <div class="option-creation-row">
+              <input type="text" class="input-field" id="option-input" placeholder="Escreva uma alternativa lógica de ação...">
+              <button class="btn btn-primary" id="btn-add-option">Adicionar</button>
+            </div>
+            <div class="options-list-box" id="options-list-container">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Step 5: Result -->
+          <div class="wizard-step-panel" id="wizard-step-result">
+            <h3 class="wizard-panel-title" style="color:var(--color-success);">Plano de Ação Gerado</h3>
+            <p class="wizard-panel-desc">Você organizou os fatos e estruturou um caminho de controle. Siga este protocolo:</p>
+            <div class="result-summary-box">
+              <div class="result-row">
+                <span class="result-lbl">Seu Menor Passo:</span>
+                <span class="result-val" id="result-clarity-val">N/A</span>
+              </div>
+              <div class="result-row">
+                <span class="result-lbl">Horizonte do Pior Cenário:</span>
+                <span class="result-val" id="result-worst-val">N/A</span>
+              </div>
+              <div class="result-row">
+                <span class="result-lbl">Alternativa Selecionada:</span>
+                <span class="result-val" id="result-action-val">N/A</span>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="btn-save-decision-diary" style="width:100%; margin-top:1.5rem;">Registrar Plano no Diário</button>
+          </div>
+
+        </div>
+
+        <!-- Wizard Navigation -->
+        <div class="wizard-nav-actions" style="margin-top:2rem; display:flex; justify-content:space-between;">
+          <button class="btn btn-secondary" id="wizard-prev-btn">Voltar</button>
+          <button class="btn btn-primary" id="wizard-next-btn">Avançar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: FISIOLOGIA & FOCO NO APRENDIZADO -->
+    <section class="section-block" id="motivation-section">
+      <div class="section-header">
+        <span class="section-tag">Fisiologia Básica</span>
+        <h2 class="section-title">Quando o Esforço Parece Inútil</h2>
+        <p class="section-subtitle">Antes de culpar a sua inteligência, verifique as falhas biológicas imediatas do seu cérebro.</p>
+      </div>
+
+      <div class="motivation-grid">
+        
+        <!-- Left: Physical checklist -->
+        <div class="glass-card phys-checklist-card">
+          <h3 class="card-title">Checklist Biológico do Foco</h3>
+          <p class="card-desc">O estresse e a exaustão física criam barreiras que anulam a plasticidade neural. Responda com sinceridade:</p>
+          
+          <div class="phys-checklist-inputs">
+            <label class="phys-checkbox">
+              <input type="checkbox" id="phys-check-1">
+              <span>Dormi bem na última noite? (Consolidação de memória)</span>
+            </label>
+            <label class="phys-checkbox">
+              <input type="checkbox" id="phys-check-2">
+              <span>Bebi água e me alimentei nas últimas 4 horas? (Glicose cortical)</span>
+            </label>
+            <label class="phys-checkbox">
+              <input type="checkbox" id="phys-check-3">
+              <span>Estou estudando ou treinando há mais de 2 horas seguidas? (Saturação)</span>
+            </label>
+            <label class="phys-checkbox">
+              <input type="checkbox" id="phys-check-4">
+              <span>Minha musculatura está tensa ou sinto dor física agora? (Sinal de alerta)</span>
+            </label>
+            <label class="phys-checkbox phys-checkbox-chronic">
+              <input type="checkbox" id="phys-check-chronic-sleep">
+              <span>Tenho restrição crônica de sono (5h a 6h por dia)?</span>
+            </label>
+          </div>
+
+          <!-- Dynamic recommendation alert -->
+          <div class="checklist-feedback" id="phys-checklist-feedback">
+            Selecione suas condições físicas para calibrar o feedback.
+          </div>
+        </div>
+
+        <!-- Right: Theoretical accordions -->
+        <div class="accordion-container" id="motivation-accordion">
+          
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>📚</span>
+              O Platô de Consolidação
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>O aprendizado não ocorre em uma linha reta de evolução contínua. Ele se dá por saltos intercalados com longos platôs.</p>
+              <p>Durante o platô, seu cérebro está fazendo sinapses de fundo, consolidando as memórias motoras e técnicas. Parar agora é apagar esse trabalho invisível de organização neural.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>🧠</span>
+              O Paradoxo de Treinar sob Estresse
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>Quando você treina ou estuda no ápice do estresse e da raiva, o córtex pré-frontal é sequestrado pela amígdala.</p>
+              <p>Seu cérebro passa a priorizar respostas de sobrevivência rápida (reflexo reativo) e perde a capacidade de consolidar raciocínio complexo ou memorizar padrões. Pare por 15 minutos.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>⏱️</span>
+              Estudo Ativo Deliberado vs. Passivo
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>Ficar lendo slides ou assistindo aulas passivamente dá a falsa ilusão de conhecimento, mas consome pouca energia neural.</p>
+              <p>A plasticidade necessita de esforço deliberado: resolva problemas reais, simule cenários, explique o conceito com suas palavras ou tente reproduzir o código sem olhar.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" id="sleep-accordion-item">
+            <button class="accordion-trigger" style="border-left: 3px solid var(--color-warning);">
+              <span>😴</span>
+              Treino & Sono Crônico (5h-6h por dia)
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>Sob privação crônica de sono, o cérebro opera com exaustão no córtex pré-frontal, diminuindo a coordenação fina e aumentando o tempo de reação mecânica.</p>
+              <p>Ajuste suas expectativas técnica/motoras e adote estratégias adaptativas imediatas:</p>
+              <ul style="padding-left:1.2rem; margin-top:0.5rem; display:flex; flex-direction:column; gap:0.4rem; font-size:0.85rem;">
+                <li><b>Sessões Ultra-Curtas:</b> Foque em blocos de 20 a 30 minutos no máximo.</li>
+                <li><b>Antecipação de Padrões:</b> Mude seu estilo de 'velocidade pura' para leitura e previsão lógica do adversário/conteúdo.</li>
+                <li><b>Micro-Descanso NSDR:</b> Faça pausas de 10-15 minutos sem olhar para telas (repouso neurológico profundo) para esvaziar a fadiga.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: SIMULADOR DE DIGNIDADE & CONTROLE DE PROVOCAÇÕES -->
+    <section class="section-block" id="provocation-section">
+      <div class="section-header">
+        <span class="section-tag">Comunicação e Blindagem</span>
+        <h2 class="section-title">Simulador de Dignidade</h2>
+        <p class="section-subtitle">Aprenda a desarmar provocações, deboches ou manipulações sem se rebaixar emocionalmente.</p>
+      </div>
+
+      <div class="provocation-layout">
+        
+        <!-- Interactive simulator box -->
+        <div class="glass-card simulator-chat-card">
+          <div class="simulator-hud">
+            <div class="scenario-selector-box">
+              <label for="scenario-selector" style="font-size:0.75rem; color:var(--text-secondary);">Debate Ativo:</label>
+              <select id="scenario-selector" class="input-field" style="padding:0.4rem; font-size:0.8rem; width:auto; display:inline-block; margin-left:0.5rem;">
+                <option value="0">ToxicGamer99 (Trash Talk em Equipe)</option>
+                <option value="1">ProfessorExigente (Cobrança Acadêmica)</option>
+                <option value="2">FighterRival (Provocação Duelo 1v1)</option>
+                <option value="3">ManipuladorEmocional (Triangulação & Chantagem)</option>
+              </select>
+            </div>
+            <div class="toxicity-gauge">
+              <span class="gauge-label">Escala de Conflito:</span>
+              <div class="gauge-bar-bg">
+                <div class="gauge-bar-fill" id="toxicity-gauge-fill" style="width: 100%;"></div>
+              </div>
+              <span class="gauge-pct" id="toxicity-pct-val">100%</span>
+            </div>
+          </div>
+
+          <div class="simulator-chat-box" id="simulator-chat-container">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div class="simulator-options" id="chat-options-container">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div class="simulator-feedback" id="chat-scenario-feedback" style="display:none;"></div>
+        </div>
+
+        <!-- Dignity cards grid -->
+        <div class="dignity-tips-grid">
+          
+          <div class="glass-card dignity-tip-card">
+            <h4 class="tip-card-title">🪨 Método da Pedra Cinzenta</h4>
+            <p class="tip-card-desc">
+              Diante de gaslighting ou manipulações de culpa, responda de forma monótona, apática e desinteressante. 
+              Ao não demonstrar reação emocional, você impede que o manipulador obtenha o controle da conversa.
+            </p>
+          </div>
+
+          <div class="glass-card dignity-tip-card">
+            <h4 class="tip-card-title">🧘 Postura Monótona em Duelos 1v1</h4>
+            <p class="tip-card-desc">
+              Em duelos diretos, o rival que exibe sua vitória busca ver sua raiva ou desculpas. 
+              Responder com apatia apática ("Jogou bem. Foi isso.") destrói a recompensa dopaminérgica dele e desarma o confronto.
+            </p>
+          </div>
+
+          <div class="glass-card dignity-tip-card" style="border-left: 2px solid var(--color-primary-light);">
+            <h4 class="tip-card-title">🚫 O "Mute" Emocional</h4>
+            <p class="tip-card-desc">
+              Trate o provocador como uma IA de teste ou como um ruído técnico de fundo. 
+              Não personalize o ataque. A agressão dele descreve a imaturidade de quem ataca, não a sua dignidade.
+            </p>
+          </div>
+
+          <div class="glass-card dignity-tip-card">
+            <h4 class="tip-card-title">⚔️ Regra do FT5/FT10 Fictício</h4>
+            <p class="tip-card-desc">
+              Aceite que perder partidas para adversários mais treinados ou em dias ruins faz parte da amostragem estatística de evolução, e não representa o teto das suas habilidades técnicas.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: FILOSOFIA DE VIDA & ESCOLHAS (NEW) -->
+    <section class="section-block" id="philosophy-section">
+      <div class="section-header">
+        <span class="section-tag">Perspectivas e Sabedoria</span>
+        <h2 class="section-title">Filosofia de Vida & Escolhas</h2>
+        <p class="section-subtitle">Para ler quando a dúvida paralisar, o arrependimento pesar ou a dor existencial surgir.</p>
+      </div>
+
+      <!-- Filter chips container -->
+      <div class="filter-container">
+        <button class="filter-chip-ph active" data-filter="all">Todos</button>
+        <button class="filter-chip-ph" data-filter="choices">Escolhas & Incerteza</button>
+        <button class="filter-chip-ph" data-filter="identity">Identidade & Valores</button>
+        <button class="filter-chip-ph" data-filter="growth">Crescimento & Conforto</button>
+        <button class="filter-chip-ph" data-filter="suffering">Sofrimento, Luto & Sentido</button>
+      </div>
+
+      <div class="philosophy-accordion-container" id="philosophy-accordion">
+        
+        <!-- Tópico 1 -->
+        <div class="philosophy-item glass-card" data-category="choices">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">⚖️</span>
+            Como fazer escolhas?
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Toda escolha nasce da incerteza.</p>
+            <p>Se soubéssemos exatamente o resultado de cada decisão, escolher seria apenas um cálculo. Mas a vida não funciona assim. Sempre existe uma parte do futuro que permanece desconhecida.</p>
+            <p><strong>O erro mais comum é esperar sentir certeza antes de agir.</strong> A verdade é que, na maioria das vezes, a certeza aparece depois da escolha, quando começamos a construir aquele caminho.</p>
+            <p>A melhor maneira de fazer escolhas não é procurar a decisão perfeita, mas fazer perguntas melhores:</p>
+            <ul>
+              <li>Essa decisão está de acordo com meus valores?</li>
+              <li>Estou escolhendo por medo ou por vontade?</li>
+              <li>Se ninguém me julgasse, eu ainda faria essa escolha?</li>
+              <li>Estou fugindo de algo ou caminhando em direção ao que considero importante?</li>
+            </ul>
+            <p>Quanto mais uma escolha estiver alinhada com quem você deseja ser, maior a chance de ela fazer sentido no futuro.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Como fazer escolhas?">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 2 -->
+        <div class="philosophy-item glass-card" data-category="identity">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🐾</span>
+            Essência Humana e Escolhas
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p><strong>A essência animal é definida pelo instinto; a humana é construída pelas escolhas.</strong></p>
+            <p>Os animais vivem principalmente guiados pelos instintos. Eles não escolhem quais valores seguir nem refletem sobre o propósito de suas vidas. O ser humano é diferente.</p>
+            <p>Embora também tenha instintos, ele possui consciência e liberdade para decidir quem deseja se tornar.</p>
+            <ul>
+              <li>Você não nasce paciente. Você se torna paciente.</li>
+              <li>Você não nasce disciplinado. Você desenvolve disciplina.</li>
+            </ul>
+            <p>Cada escolha fortalece uma parte da sua personalidade. Cada hábito reforça um modo de pensar. No fim das contas, somos, em grande parte, resultado das decisões que repetimos todos os dias. Nossa identidade não aparece pronta. Ela é construída lentamente.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Essência Humana e Escolhas">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 3 -->
+        <div class="philosophy-item glass-card" data-category="growth">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🕸️</span>
+            O Perigo do Conforto e do Conformismo
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Conforto não é o inimigo. Todos precisamos descansar, recuperar energia e encontrar segurança.</p>
+            <p><strong>O problema surge quando o conforto se transforma em conformismo.</strong> É quando permanecemos em uma situação ruim apenas porque ela é conhecida.</p>
+            <p>Muitas pessoas continuam em empregos que odeiam, relacionamentos infelizes, rotinas vazias e sonhos abandonados. Não porque sejam felizes, mas porque mudar assusta. <strong>O cérebro prefere um sofrimento conhecido do que um risco desconhecido.</strong></p>
+            <p>O crescimento quase sempre exige desconforto. Se uma situação impede seu crescimento há muito tempo, talvez o maior risco não seja mudar, mas permanecer exatamente onde está.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="O Perigo do Conforto e do Conformismo">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 4 -->
+        <div class="philosophy-item glass-card" data-category="choices">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">💡</span>
+            Por que escolher é difícil?
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p><strong>Escolher significa desistir.</strong> Toda decisão elimina inúmeras possibilidades.</p>
+            <p>Ao escolher uma profissão, você abre mão de centenas de outras. Ao escolher um relacionamento, você deixa de viver inúmeras possibilidades diferentes. Quanto maior a importância da decisão, maior costuma ser o medo.</p>
+            <p>Também existe outro motivo. Nosso cérebro tenta prever o futuro para evitar sofrimento. Como isso é impossível, ele cria dúvidas sem fim. Por isso pensar demais nem sempre produz decisões melhores. Às vezes apenas aumenta a ansiedade.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Por que escolher é difícil?">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 5 -->
+        <div class="philosophy-item glass-card" data-category="growth">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🌪️</span>
+            Angústia Existencial
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Existe um momento na vida em que percebemos algo assustador: <strong>ninguém pode viver nossa vida por nós. Somos nós que decidimos.</strong></p>
+            <p>Essa liberdade pode parecer pesada. A angústia existencial nasce justamente dessa percepção. Ela aparece quando entendemos que nossas escolhas realmente importam.</p>
+            <p>Muitas pessoas tentam fugir dessa sensação ocupando a mente o tempo todo. Mas a angústia nem sempre é um problema. Ela também pode ser um sinal de crescimento. <strong>Quem nunca questiona sua vida provavelmente também nunca muda.</strong></p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Angústia Existencial">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 6 -->
+        <div class="philosophy-item glass-card" data-category="suffering">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🍂</span>
+            Como lidar melhor com perdas (luto)
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Perder faz parte da vida. Podemos perder pessoas, relacionamentos, sonhos, fases da nossa história e até versões antigas de nós mesmos.</p>
+            <p>O sofrimento existe porque existiu amor, esperança ou significado. Por isso, não existe um jeito de eliminar completamente a dor. O melhor caminho costuma ser:</p>
+            <ul>
+              <li>Aceitar que a perda aconteceu.</li>
+              <li>Permitir sentir tristeza.</li>
+              <li>Evitar lutar contra emoções naturais.</li>
+              <li>Continuar vivendo aos poucos.</li>
+              <li>Criar novos significados sem apagar o que foi vivido.</li>
+            </ul>
+            <p><strong>Superar não significa esquecer.</strong> Significa aprender a continuar mesmo carregando uma ausência.</p>
+            <p class="reflection-warning-note">⚠️ Se o sofrimento for intenso e persistente a ponto de impedir a pessoa de viver sua rotina, buscar ajuda profissional é importante.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Como lidar melhor com perdas (luto)">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 7 -->
+        <div class="philosophy-item glass-card" data-category="choices">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🌱</span>
+            As Pequenas Escolhas Importam
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>As grandes decisões mudam nossa direção. <strong>As pequenas decisões determinam até onde chegaremos.</strong></p>
+            <p>Uma caminhada não é feita por um único passo. É feita por milhares. Cinco minutos de leitura por dia parecem pouco, mas durante anos se transformam em centenas de horas. O mesmo acontece com alimentação, estudos, relacionamentos e hábitos.</p>
+            <p>Nossa vida raramente muda por causa de uma decisão gigantesca. Ela muda pela soma das pequenas escolhas repetidas diariamente.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="As Pequenas Escolhas Importam">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 8 -->
+        <div class="philosophy-item glass-card" data-category="choices">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">❌</span>
+            Por que escolhemos errado?
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Nem toda decisão ruim nasce da falta de inteligência. Muitas vezes escolhemos mal porque:</p>
+            <ul>
+              <li>Agimos com medo ou sob forte abalo emocional.</li>
+              <li>Queremos agradar outras pessoas ou buscamos resultados imediatos.</li>
+              <li>Não possuímos todas as informações disponíveis.</li>
+            </ul>
+            <p>Além disso, ninguém consegue prever todas as consequências de uma escolha. Uma decisão aparentemente boa pode produzir resultados ruins; outra aparentemente ruim pode abrir oportunidades inesperadas.</p>
+            <p><strong>Errar faz parte da condição humana.</strong> O importante não é nunca errar, é aprender com cada erro.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Por que escolhemos errado?">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 9 -->
+        <div class="philosophy-item glass-card" data-category="suffering">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🎈</span>
+            A Ilusão da Felicidade Permanente
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p><strong>Enquanto a gente escolher esperando felicidade, seremos infelizes.</strong></p>
+            <p>A felicidade é um sentimento. E sentimentos mudam. Quem acredita que toda decisão deve produzir felicidade constante acaba vivendo frustrado. Nenhum emprego, relacionamento, sonho ou conquista é capaz de gerar felicidade permanente.</p>
+            <p>Isso não significa abandonar a felicidade. Significa entender que ela costuma aparecer como consequência de uma vida bem vivida, e não como um objetivo que pode ser perseguido diretamente.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="A Ilusão da Felicidade Permanente">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 10 -->
+        <div class="philosophy-item glass-card" data-category="suffering">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">⛓️</span>
+            Renúncia e Sofrimento nas Escolhas
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p><strong>Toda grande escolha exige um grau de sofrimento.</strong> Toda escolha importante envolve renúncia.</p>
+            <p>Mudar exige deixar algo para trás. Mesmo quando escolhemos algo maravilhoso, ainda sentimos falta do que abandonamos. Isso é normal. O sofrimento não significa que a decisão foi errada; às vezes apenas mostra que aquela escolha realmente importava. Crescer quase sempre dói. Mas permanecer preso ao mesmo lugar também pode doer.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Renúncia e Sofrimento nas Escolhas">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 11 -->
+        <div class="philosophy-item glass-card" data-category="suffering">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">❓</span>
+            E quando o sofrimento parece persistir?
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Nem todo sofrimento ensina. Alguns apenas machucam.</p>
+            <p>Existe uma diferença entre enfrentar dificuldades que fazem parte do crescimento e permanecer preso em uma situação que destrói sua saúde emocional. Pergunte a si mesmo:</p>
+            <ul>
+              <li>Esse sofrimento está me ajudando a crescer?</li>
+              <li>Ou está apenas me consumindo?</li>
+            </ul>
+            <p class="reflection-warning-note">⚠️ Se a dor se torna constante, intensa e começa a impedir sua vida, não é sinal de fraqueza procurar ajuda profissional. Pedir apoio também é uma escolha corajosa.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="E quando o sofrimento parece persistir?">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 12 -->
+        <div class="philosophy-item glass-card" data-category="suffering">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🎯</span>
+            Esqueça a Felicidade. Busque Significado.
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p><strong>Felicidade é um estado. Significado é uma direção.</strong></p>
+            <p>Você pode estar cansado estudando para um sonho, sentir medo abrindo um negócio, ou sofrer cuidando de alguém que ama. Mesmo sem felicidade naquele momento, sua vida pode fazer sentido. Quando sabemos por que fazemos algo, suportamos melhor as dificuldades. O significado costuma durar mais que o prazer imediato.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Esqueça a Felicidade. Busque Significado.">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 13 -->
+        <div class="philosophy-item glass-card" data-category="choices">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🗺️</span>
+            Será que escolhi certo?
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Essa pergunta quase nunca possui resposta. Porque nunca viveremos a vida que não escolhemos. Sempre imaginaremos que o outro caminho talvez fosse melhor.</p>
+            <p>Mas essa comparação acontece com uma versão imaginária da realidade. O outro caminho também teria dificuldades. <strong>O foco não deveria ser descobrir se a escolha foi perfeita, mas construir uma vida que faça aquela decisão valer a pena.</strong></p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Será que escolhi certo?">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 14 -->
+        <div class="philosophy-item glass-card" data-category="suffering">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">⚖️</span>
+            Ao esperar felicidade, sempre saímos perdendo
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Quanto maior nossa expectativa de felicidade permanente, maior será nossa frustração.</p>
+            <p>A vida possui momentos de alegria, mas também possui medo, perdas, fracassos e dúvidas. <strong>Esperar uma felicidade constante é esperar algo que nenhuma vida pode oferecer.</strong> Aceitar essa realidade torna os momentos felizes ainda mais valiosos.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Ao esperar felicidade, sempre saímos perdendo">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 15 -->
+        <div class="philosophy-item glass-card" data-category="suffering">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🌪️</span>
+            Escolha isso ou aquilo... você vai se arrepender
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Toda escolha deixa possibilidades para trás. Quem muda de cidade sente falta da antiga. Quem permanece sente curiosidade pela nova. Quem tem filhos pode sentir falta da liberdade. Quem não tem pode imaginar como seria formar uma família.</p>
+            <p><strong>O arrependimento faz parte da experiência humana.</strong> Isso não significa que escolhemos errado. Significa apenas que nenhuma decisão entrega tudo. Aceitar essa limitação nos ajuda a viver com menos culpa.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Escolha isso ou aquilo... você vai se arrepender">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 16 -->
+        <div class="philosophy-item glass-card" data-category="identity">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🧭</span>
+            Valores como Bússola Existencial
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p><strong>Não existe escolha certa ou errada. O que existe são seus valores.</strong></p>
+            <p>Existem escolhas moralmente erradas, como prejudicar outras pessoas deliberadamente. Mas, em muitas situações da vida, não há uma única resposta correta (escolher entre duas carreiras, mudar ou permanecer, investir ou viajar...).</p>
+            <p>Nesses casos, a melhor escolha costuma ser aquela mais coerente com seus valores. <strong>Valores funcionam como uma bússola: eles não eliminam a dúvida, mas impedem que você caminhe sem direção.</strong></p>
+            <p>A cobrança para escolher o "certo" não é só injusta, mas ilusória. Ninguém possui informações completas sobre o futuro. Você não controla todas as consequências; controla apenas a intenção, o esforço e a responsabilidade com que decide.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Valores como Bússola Existencial">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+        <!-- Tópico 17 -->
+        <div class="philosophy-item glass-card" data-category="identity">
+          <button class="philosophy-trigger">
+            <span class="ph-trigger-icon">🤍</span>
+            Responsabilidade e Compaixão Própria
+            <span class="ph-trigger-arrow">▼</span>
+          </button>
+          <div class="philosophy-content">
+            <p>Assumir responsabilidade não significa carregar culpa por tudo. Significa reconhecer que, embora não controlemos tudo o que acontece, podemos decidir como responder às situações.</p>
+            <p>Ao mesmo tempo, precisamos abandonar a ideia de que errar nos torna fracassados. Todos erram, todos mudam de ideia, todos aprendem.</p>
+            <p><strong>Ser gentil consigo mesmo não é passar a mão na própria cabeça.</strong> É tratar seus erros da mesma forma que trataria alguém que você ama: com honestidade, aprendizado e compaixão.</p>
+            <button class="btn btn-secondary btn-sm btn-mark-read" data-title="Responsabilidade e Compaixão Própria">Marcar como Reflexão Concluída</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6: DIÁRIO DE RESILIÊNCIA UNIFICADO -->
+    <section class="section-block" id="diary-section">
+      <div class="section-header">
+        <span class="section-tag">Histórico de Conquistas</span>
+        <h2 class="section-title">Diário de Resiliência</h2>
+        <p class="section-subtitle">O registro unificado de todas as decisões, micro-vitórias físicas e atitudes de controle emocional.</p>
+      </div>
+
+      <div class="diary-grid">
+        <!-- Stats panel -->
+        <div class="diary-stats-sidebar">
+          <div class="diary-stat-card glass-card">
+            <span class="stat-num" id="total-actions-val">0</span>
+            <span class="stat-label">Micro-Ações Gravadas</span>
+          </div>
+          <div class="diary-stat-card glass-card">
+            <span class="stat-num" id="streak-days-val">0</span>
+            <span class="stat-label">Dias Consecutivos</span>
+          </div>
+        </div>
+
+        <!-- History logs -->
+        <div class="diary-logs-container glass-card">
+          <h3 class="logs-header">Registro das Suas Atitudes de Sobrevivência</h3>
+          <div class="logs-list" id="logs-list-el">
+            <p class="logs-empty-msg" id="logs-empty-msg-el">Nenhuma ação registrada hoje. Vá para o Protocolo de Crise ou Guia de Decisão para agir e registrar suas micro-vitórias.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Mindful Control & Resiliência. Focado na ação prática, autonomia emocional e superação de platôs biológicos e sociais. Seu progresso depende de cada pequeno passo.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
