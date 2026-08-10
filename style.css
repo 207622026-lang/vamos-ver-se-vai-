@@ -1510,6 +1510,78 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Kierkegaard Quote Styling */
+.kierkegaard-quote {
+  background: rgba(178, 142, 147, 0.05); /* soft red/accent tint matching var(--color-accent) */
+  border-left: 3px solid var(--color-accent);
+  padding: 1rem 1.25rem;
+  font-family: var(--font-title);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 1.1rem;
+  line-height: 1.55;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.kierkegaard-quote cite {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.45rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Sense Checklist Grid (Topic 18) */
+.sense-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.65rem;
+  margin: 0.75rem 0;
+}
+
+.check-label-sense {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.45rem 0.65rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.check-label-sense:hover {
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.check-label-sense input {
+  margin-top: 0.15rem;
+  accent-color: var(--color-primary);
+}
+
+.check-label-sense input:checked + span {
+  color: var(--color-primary-light);
+  font-weight: 600;
+}
+
+.sense-feedback-note {
+  background: rgba(136, 170, 141, 0.05); /* Sage green tint */
+  border-left: 3px solid var(--color-primary);
+  padding: 0.85rem 1.1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 968px) {
   .pillar-tools-grid, .motivation-grid, .provocation-layout, .diary-grid {

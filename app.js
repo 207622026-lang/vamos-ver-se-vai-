@@ -905,6 +905,27 @@ function initPhilosophySection() {
       btn.style.opacity = '0.7';
     });
   });
+
+  // Topic 18: Mas e se nada fizer sentido? checklist logic
+  const senseCheckboxes = document.querySelectorAll('.sense-item-cb');
+  const senseFeedback = document.getElementById('sense-feedback-note-el');
+
+  senseCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      const anyChecked = Array.from(senseCheckboxes).some(c => c.checked);
+      if (anyChecked) {
+        if (senseFeedback) senseFeedback.style.display = 'block';
+      } else {
+        if (senseFeedback) senseFeedback.style.display = 'none';
+      }
+
+      if (cb.checked) {
+        playTone(480, 'sine', 0.08);
+        const name = cb.getAttribute('data-name');
+        registerResilienceAction(`Identifiquei algo que importa hoje: ${name}`);
+      }
+    });
+  });
 }
 
 /* ==========================================================================
