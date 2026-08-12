@@ -173,9 +173,9 @@ header {
 .nav-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  padding: 0.35rem 0.65rem;
+  padding: 0.3rem 0.5rem;
   border-radius: var(--radius-sm);
   transition: var(--transition-fast);
 }
@@ -1599,7 +1599,7 @@ footer {
   animation: fadeIn 0.35s ease-out forwards;
 }
 
-@media (max-width: 1150px) and (min-width: 601px) {
+@media (max-width: 1280px) and (min-width: 601px) {
   .nav-links {
     flex-wrap: nowrap;
     overflow-x: auto;
