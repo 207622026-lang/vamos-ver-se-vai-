@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initDignitySimulator();
   initPhilosophySection();
+  initComplicationsSection();
+  initHardTruthsSection();
+  initAutoAnalysisSection();
   initDiaryLogs();
 });
 
@@ -39,6 +42,7 @@ function initNavigation() {
         }
       });
 
+      window.scrollTo(0, 0);
       playTone(620, 'sine', 0.05);
     });
   });
@@ -635,97 +639,29 @@ function initAccordion() {
    ========================================================================== */
 const simulatorScenarios = [
   {
-    opponentName: "ToxicGamer99",
-    messages: [
-      { text: "Nossa, você joga muito mal! Desinstala o jogo, seu lixo!", sender: "opponent" }
-    ],
+    opponentName: "RivalBemSucedido",
+    opponentText: "- Você quer mesmo comparar?<br>- Quer vir falar de responsabilidades?<br>Eu pelo menos tenho um alguém pra eu ter feito o que eu fiz, eu tenho uma namorada, coisa que quem sabe vc algum dia entenda.<br>- A é verdade eu me lembrei agora que você não consegue uma namorada nem se vc estiver pintado de ouro.<br>- Eu posso até só viver de momentos, mas mesmo sem me planejar eu consigo sair muito melhor que você, tanto nos estudos, nos jogos quanto em qualquer outro lugar, vc pode ver é só comparar as notas, literal tudo, mas rlx parceiro que um dia com muito esforço quem sabe vc chegue perto de me alcançar.",
     options: [
       {
-        text: "O lag estava alto e meu time não ajudou em nada...",
-        reply: "Chora mais, perdedor! Desculpa de aleijado é muleta. Aceita que é ruim!",
+        text: "Cara, eu ando exausto ultimamente e mal dou conta das coisas. E sério, nota não define quem é inteligente ou não.",
+        reply: "Desculpas são fáceis. O fato é que eu me esforço e tenho resultados, e você só fica na mesma. Aceita que sou melhor.",
         type: "excuse",
-        toxicityChange: +10,
-        feedback: "❌ <b>Justificativas externas:</b> Tentar se justificar demonstra insegurança e valida a provocação do adversário."
+        toxicityChange: 15,
+        feedback: "❌ <b>Reação de Insegurança (Defensiva):</b> Tentar arranjar desculpas para justificar sua exaustão ou desmerecer as notas apenas valida a superioridade dele. Mostra que o ataque te feriu e você aceitou a régua de valor dele. Dignidade não é ser perfeito, mas perceber que você deu valor ao julgamento dele."
       },
       {
-        text: "Lixo é você! Vem x1 para ver se você é homem!",
-        reply: "Kkkk sentiu! Chora mais, moleque. Fraco e descontrolado!",
+        text: "Você é só um exibido chato que ninguém suporta! Cala a boca e me deixa em paz!",
+        reply: "Xingar só mostra como você se sente inferior e não tem argumentos. Fique aí com a sua inveja.",
         type: "rage",
-        toxicityChange: +20,
-        feedback: "❌ <b>Agressividade reativa:</b> Contra-atacar agressivamente mostra que ele controlou sua mente e te desestabilizou."
+        toxicityChange: 25,
+        feedback: "❌ <b>Explosão de Raiva:</b> É a reação humana mais comum quando a dor aperta. Mas xingar mostra que ele conseguiu te descontrolar por completo. A raiva passa para o outro o controle da sua mente. O arrependimento depois faz parte de ser humano; acolha o aprendizado."
       },
       {
-        text: "Foi uma partida ruim. Jogou bem.",
-        reply: "Hum... É. Valeu.",
-        type: "fogging",
+        text: "Se precisa diminuir alguém pra se sentir maior, talvez você não seja tão superior quanto pensa.",
+        reply: "Hum... É... Enfim, só estava comentando. Deixa pra lá.",
+        type: "pragmatic",
         toxicityChange: -100,
-        feedback: "✅ <b>Postura Monótona:</b> Responder de maneira curta e apática desarma o deboche por falta de combustível emocional."
-      }
-    ]
-  },
-  {
-    opponentName: "ProfessorExigente",
-    messages: [
-      { text: "Esse trabalho está horrível. Você realmente acha que tem capacidade de passar nessa matéria?", sender: "opponent" }
-    ],
-    options: [
-      {
-        text: "O senhor não explicou o assunto direito e cobra muito difícil!",
-        reply: "A responsabilidade de estudar as referências indicadas é do aluno. Com essa atitude imatura, não passará mesmo.",
-        type: "excuse",
-        toxicityChange: +15,
-        feedback: "❌ <b>Ataque à hierarquia:</b> Justificar o desempenho com ataques à autoridade quebra a etiqueta técnica e piora a cobrança."
-      },
-      {
-        text: "De fato, a formatação técnica e a estrutura ficaram aquém do esperado.",
-        reply: "Fico feliz que reconheça. Quero uma revisão estruturada até a próxima segunda.",
-        type: "fogging",
-        toxicityChange: -100,
-        feedback: "✅ <b>Fogging Técnico:</b> Aceitar o fato objetivo técnico (\"a estrutura ficou aquém\") sem validar o julgamento existencial protege sua dignidade."
-      }
-    ]
-  },
-  {
-    opponentName: "FighterRival",
-    messages: [
-      { text: "Nossa, você é muito ruim, tomou um perfect! Kkkk noob demais, desiste!", sender: "opponent" }
-    ],
-    options: [
-      {
-        text: "Você só venceu porque seu personagem é quebrado!",
-        reply: "Chora no patch kkk noob! Personagem não faz milagre.",
-        type: "excuse",
-        toxicityChange: +10,
-        feedback: "❌ <b>Tentar se justificar:</b> Reclamar do balanceamento técnico enfraquece sua imagem e conforta o adversário."
-      },
-      {
-        text: "Jogou bem. Foi isso.",
-        reply: "Hum... Valeu. GG.",
-        type: "fogging",
-        toxicityChange: -100,
-        feedback: "✅ <b>Postura Monótona:</b> Responder de forma curta e sem paixão corta a recompensa dopaminérgica de quem quer ver você irritado."
-      }
-    ]
-  },
-  {
-    opponentName: "ManipuladorEmocional",
-    messages: [
-      { text: "Você é egoísta demais, só pensa em você. Se você se importasse de verdade, faria o que eu te pedi!", sender: "opponent" }
-    ],
-    options: [
-      {
-        text: "Eu não sou egoísta! Eu fiz tudo por você na semana passada, você que é ingrato!",
-        reply: "Viu só? Você se defende atacando. Tudo tem que ser do seu jeito!",
-        type: "rage",
-        toxicityChange: +15,
-        feedback: "❌ <b>Triangulação reativa:</b> Entrar na defensiva ou contra-atacar valida a acusação do manipulador."
-      },
-      {
-        text: "Eu compreendo a sua opinião. Mas não vou fazer isso hoje.",
-        reply: "Hum... É? Tá. Bem, tanto faz...",
-        type: "greyrock",
-        toxicityChange: -100,
-        feedback: "✅ <b>Pedra Cinzenta (Grey Rock):</b> Responder sem justificar, de forma neutra e impessoal, corta o canal de controle."
+        feedback: "✅ <b>Firmeza com Dignidade:</b> Você escolheu não entrar na competição dele. Em vez de lutar com desculpas ou agressões, você colocou um limite direto apontando a insegurança dele. Essa atitude desarma o ataque por completo."
       }
     ]
   }
@@ -736,12 +672,12 @@ let currentToxicity = 100;
 
 function initDignitySimulator() {
   const selector = document.getElementById('scenario-selector');
-  if (!selector) return;
-
-  selector.addEventListener('change', (e) => {
-    activeScenarioIdx = parseInt(e.target.value);
-    resetScenario();
-  });
+  if (selector) {
+    selector.addEventListener('change', (e) => {
+      activeScenarioIdx = parseInt(e.target.value);
+      resetScenario();
+    });
+  }
 
   resetScenario();
 }
@@ -760,8 +696,8 @@ function resetScenario() {
   optionsContainer.innerHTML = '';
   feedback.style.display = 'none';
 
-  const scenario = simulatorScenarios[activeScenarioIdx];
-  appendBubble(scenario.messages[0].text, 'opponent', scenario.opponentName, chatContainer);
+  const scenario = simulatorScenarios[0];
+  appendBubble(scenario.opponentText, 'opponent', scenario.opponentName, chatContainer, false);
 
   scenario.options.forEach(opt => {
     const btn = document.createElement('button');
@@ -770,12 +706,11 @@ function resetScenario() {
     
     btn.addEventListener('click', () => {
       optionsContainer.innerHTML = '';
-      appendBubble(opt.text, 'user', '', chatContainer);
-      
+      appendBubble(opt.text, 'user', '', chatContainer, true);
       playTone(450, 'sine', 0.1);
 
       setTimeout(() => {
-        appendBubble(opt.reply, 'opponent', scenario.opponentName, chatContainer);
+        appendBubble(opt.reply, 'opponent', scenario.opponentName, chatContainer, true);
         
         currentToxicity = Math.max(0, Math.min(100, currentToxicity + opt.toxicityChange));
         if (opt.toxicityChange < 0) currentToxicity = 0; // complete de-escalation
@@ -783,40 +718,52 @@ function resetScenario() {
         updateToxicityGauge();
 
         feedback.style.display = 'block';
+        let feedbackClass = 'failure';
         if (currentToxicity === 0) {
-          feedback.className = 'simulator-feedback success';
-          feedback.innerHTML = `
-            <p>${opt.feedback}</p>
-            <button class="btn btn-primary btn-sm" id="btn-save-dignity-win" style="margin-top:0.75rem; width:100%;">Registrar Blindagem Emocional</button>
-          `;
-          playTone(660, 'sine', 0.25);
-          
-          document.getElementById('btn-save-dignity-win')?.addEventListener('click', () => {
-            registerResilienceAction(`Confrontei ${scenario.opponentName} de forma digna e sem reações emocionais`);
-            showToast("Vitória de autocontrole gravada!");
-            resetScenario();
-            document.getElementById('nav-diary-btn').click();
-          });
-        } else {
-          feedback.className = 'simulator-feedback failure';
-          feedback.innerHTML = `
-            <p>${opt.feedback}</p>
-            <button class="btn btn-secondary btn-sm" id="btn-retry-dignity" style="margin-top:0.75rem; width:100%;">Tentar Novamente</button>
-          `;
-          playTone(200, 'sawtooth', 0.35);
-
-          document.getElementById('btn-retry-dignity')?.addEventListener('click', () => {
-            resetScenario();
-          });
+          feedbackClass = 'success';
+        } else if (currentToxicity === 50) {
+          feedbackClass = 'warning-feedback';
         }
-      }, 700);
+        
+        feedback.className = `simulator-feedback ${feedbackClass}`;
+        
+        let btnLabel = currentToxicity === 0 ? "Registrar Limite no Diário" : "Registrar Reflexão no Diário";
+        
+        feedback.innerHTML = `
+          <p>${opt.feedback}</p>
+          <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+            <button class="btn btn-primary btn-sm" id="btn-save-dignity-win" style="flex:1;">${btnLabel}</button>
+            <button class="btn btn-secondary btn-sm" id="btn-retry-dignity" style="flex:1;">Refazer Caminho</button>
+          </div>
+        `;
+        
+        if (currentToxicity === 0) {
+          playTone(660, 'sine', 0.25);
+        } else {
+          playTone(220, 'sawtooth', 0.3);
+        }
+        
+        document.getElementById('btn-save-dignity-win')?.addEventListener('click', () => {
+          let logText = currentToxicity === 0 
+            ? "Defini um limite de dignidade assertivo diante de comparações alheias"
+            : `Refleti sobre minha reação de ${currentToxicity === 50 ? 'competição' : 'explosão'} diante de comparações`;
+          registerResilienceAction(logText);
+          showToast("Reflexão gravada no Diário!");
+          resetScenario();
+          document.getElementById('nav-diary-btn').click();
+        });
+        
+        document.getElementById('btn-retry-dignity')?.addEventListener('click', () => {
+          resetScenario();
+        });
+      }, 800);
     });
 
     optionsContainer.appendChild(btn);
   });
 }
 
-function appendBubble(text, sender, name, container) {
+function appendBubble(text, sender, name, container, autoScroll = true) {
   const bubble = document.createElement('div');
   bubble.className = `chat-bubble ${sender}`;
   
@@ -824,13 +771,20 @@ function appendBubble(text, sender, name, container) {
   bubble.innerHTML = `${prefix}${text}`;
   
   container.appendChild(bubble);
-  container.scrollTop = container.scrollHeight;
+  if (autoScroll) {
+    container.scrollTop = container.scrollHeight;
+  } else {
+    container.scrollTop = 0;
+  }
 }
 
 function updateToxicityGauge() {
   const fill = document.getElementById('toxicity-gauge-fill');
   const text = document.getElementById('toxicity-pct-val');
+  const label = document.querySelector('.toxicity-gauge .gauge-label');
   if (!fill || !text) return;
+
+  if (label) label.textContent = "Intensidade Emocional:";
 
   fill.style.width = `${currentToxicity}%`;
   text.textContent = `${currentToxicity}%`;
@@ -1143,4 +1097,332 @@ function triggerConfetti() {
   }
 
   animate();
+}
+
+function initComplicationsSection() {
+  const assessBtn = document.getElementById('btn-assess-reciprocity');
+  const feedbackEl = document.getElementById('assessment-feedback-el');
+  const dryBtn = document.getElementById('btn-dry-retreat');
+  const dryFeedbackEl = document.getElementById('dry-retreat-feedback');
+  const dryChatContainer = document.getElementById('dry-chat-container');
+
+  // Reciprocity Assessment
+  if (assessBtn && feedbackEl) {
+    assessBtn.addEventListener('click', () => {
+      const cbInterest = document.getElementById('recip-cb-interest');
+      const cbEffort = document.getElementById('recip-cb-effort');
+      const cbCare = document.getElementById('recip-cb-care');
+      
+      if (!cbInterest || !cbEffort || !cbCare) return;
+
+      let score = 0;
+      if (cbInterest.checked) score++;
+      if (cbEffort.checked) score++;
+      if (cbCare.checked) score++;
+
+      feedbackEl.style.display = 'block';
+      
+      let feedbackClass = 'failure';
+      let title = '';
+      let desc = '';
+
+      if (score === 3) {
+        feedbackClass = 'success';
+        title = '🧘 Relação Equilibrada';
+        desc = 'Há demonstração de interesse, esforço e cuidado mútuo na maior parte do tempo. Diferenças de ritmo ou comunicação são normais em seres humanos. Vocês funcionam de formas diferentes, mas coexistindo em equilíbrio.';
+        playTone(660, 'sine', 0.2);
+      } else if (score === 1 || score === 2) {
+        feedbackClass = 'warning-feedback';
+        title = '⚠️ Relação Oscilante ou Descompensada';
+        desc = 'A outra pessoa falha em alguns aspectos fundamentais (como no interesse consistente ou no esforço de manter o contato). Experimente dar espaço, diminuir o esforço unilateral e observar se o padrão muda.';
+        playTone(390, 'sine', 0.2);
+      } else {
+        feedbackClass = 'failure';
+        title = '❌ Relação Desequilibrada';
+        desc = 'Nenhum dos três pilares fundamentais está presente. Você não consegue carregar a relação sozinho. Lembre-se: não se trata de alguém complicado, mas de um padrão de ausência de reciprocidade.';
+        playTone(220, 'sawtooth', 0.35);
+      }
+
+      feedbackEl.className = `simulator-feedback ${feedbackClass}`;
+      feedbackEl.innerHTML = `
+        <p><strong>${title}:</strong> ${desc}</p>
+        <button class="btn btn-secondary btn-sm" id="btn-save-reciprocity-log" style="margin-top:0.75rem; width:100%;">Registrar Diagnóstico no Diário</button>
+      `;
+
+      document.getElementById('btn-save-reciprocity-log')?.addEventListener('click', (e) => {
+        e.target.disabled = true;
+        e.target.textContent = 'Gravado!';
+        let textLog = score === 3 
+          ? "Avaliei um relacionamento: diagnóstico de Relação Equilibrada"
+          : (score > 0 ? "Avaliei um relacionamento: diagnóstico de Relação Oscilante (decidi dar espaço)" : "Avaliei um relacionamento: diagnóstico de Relação Desequilibrada (decidi impor limites)");
+        registerResilienceAction(textLog);
+        showToast("Diagnóstico registrado no Diário!");
+        document.getElementById('nav-diary-btn').click();
+      });
+    });
+  }
+
+  // Dry message simulator
+  if (dryBtn && dryFeedbackEl && dryChatContainer) {
+    dryBtn.addEventListener('click', () => {
+      dryBtn.disabled = true;
+      dryBtn.textContent = 'Recuando...';
+      playTone(450, 'sine', 0.1);
+
+      // Append bubble simulating retreat
+      const retreatBubble = document.createElement('div');
+      retreatBubble.className = 'chat-bubble user';
+      retreatBubble.style.opacity = '0.7';
+      retreatBubble.style.fontStyle = 'italic';
+      retreatBubble.innerHTML = '[Recuo Tático: Parei de enviar mensagens e dei espaço]';
+      
+      dryChatContainer.appendChild(retreatBubble);
+      dryChatContainer.scrollTop = dryChatContainer.scrollHeight;
+
+      setTimeout(() => {
+        dryBtn.textContent = 'Simular Recuo (Dar Espaço)';
+        dryFeedbackEl.style.display = 'block';
+        dryFeedbackEl.innerHTML = `
+          <p>✨ <b>Recuo Efetuado:</b> Você optou por não insistir nem implorar por atenção de quem responde seco. Se você parar de puxar, a relação continuará existindo? Deixe essa pergunta ser respondida pela atitude do outro, sem que isso mude o seu valor próprio.</p>
+          <button class="btn btn-primary btn-sm" id="btn-save-dry-retreat" style="margin-top:0.75rem; width:100%;">Registrar Autonomia no Diário</button>
+        `;
+        playTone(660, 'sine', 0.2);
+
+        document.getElementById('btn-save-dry-retreat')?.addEventListener('click', (e) => {
+          e.target.disabled = true;
+          e.target.textContent = 'Gravado!';
+          registerResilienceAction("Simulei recuo em diálogo seco e decidi preservar minha autonomia e espaço");
+          showToast("Reflexão registrada no Diário!");
+          document.getElementById('nav-diary-btn').click();
+        });
+      }, 1000);
+    });
+  }
+}
+
+function initHardTruthsSection() {
+  const cbItems = document.querySelectorAll('.cb-truth-item');
+  const progressVal = document.getElementById('truth-progress-val');
+  const progressFill = document.getElementById('truth-progress-fill');
+  const randomBtn = document.getElementById('btn-meditate-random-truth');
+  const saveBtn = document.getElementById('btn-save-truths-diary');
+
+  if (cbItems.length === 0) return;
+
+  function updateProgress() {
+    let checkedCount = 0;
+    cbItems.forEach(cb => {
+      const idx = cb.getAttribute('data-index');
+      const card = document.getElementById(`truth-card-${idx}`);
+      const dot = document.querySelector(`.mini-truth-dot[data-dot="${idx}"]`);
+      
+      if (cb.checked) {
+        checkedCount++;
+        if (card) {
+          card.style.borderLeftColor = 'var(--color-success)';
+          card.style.background = 'linear-gradient(135deg, rgba(16, 23, 38, 0.75), rgba(136, 170, 141, 0.04))';
+          card.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.2), inset 0 0 12px rgba(136, 170, 141, 0.05)';
+        }
+        if (dot) {
+          dot.style.background = 'var(--color-primary-light)';
+          dot.style.color = 'var(--bg-dark)';
+          dot.style.borderColor = 'var(--color-primary-light)';
+          dot.style.boxShadow = '0 0 10px rgba(157, 188, 161, 0.3)';
+        }
+      } else {
+        if (card) {
+          const index = parseInt(idx);
+          card.style.borderLeftColor = index % 2 === 0 ? 'var(--color-accent)' : 'var(--color-primary-light)';
+          card.style.background = '';
+          card.style.boxShadow = '';
+        }
+        if (dot) {
+          dot.style.background = 'rgba(255, 255, 255, 0.01)';
+          dot.style.color = 'var(--text-secondary)';
+          dot.style.borderColor = 'var(--border-color)';
+          dot.style.boxShadow = '';
+        }
+      }
+    });
+
+    if (progressVal) progressVal.textContent = `${checkedCount} / ${cbItems.length}`;
+    
+    // Update SVG Progress Ring
+    const progressRing = document.getElementById('truth-progress-ring');
+    const progressPctText = document.getElementById('truth-progress-pct');
+    if (progressRing) {
+      const radius = 28;
+      const circumference = 2 * Math.PI * radius; // ~175.92
+      const pct = checkedCount / cbItems.length;
+      const offset = circumference - (pct * circumference);
+      progressRing.style.strokeDashoffset = offset;
+      
+      // Update color based on level
+      if (checkedCount === cbItems.length) {
+        progressRing.style.stroke = 'var(--color-success)';
+      } else if (checkedCount > 6) {
+        progressRing.style.stroke = 'var(--color-warning)';
+      } else {
+        progressRing.style.stroke = 'var(--color-primary-light)';
+      }
+    }
+    if (progressPctText) {
+      const percent = Math.round((checkedCount / cbItems.length) * 100);
+      progressPctText.textContent = `${percent}%`;
+      if (checkedCount === cbItems.length) {
+        progressPctText.style.color = 'var(--color-success)';
+      } else {
+        progressPctText.style.color = '#ffffff';
+      }
+    }
+  }
+
+  cbItems.forEach(cb => {
+    cb.addEventListener('change', () => {
+      playTone(450, 'sine', 0.05);
+      updateProgress();
+    });
+  });
+
+  // Meditate Random Truth
+  if (randomBtn) {
+    randomBtn.addEventListener('click', () => {
+      const randIdx = Math.floor(Math.random() * cbItems.length) + 1;
+      const card = document.getElementById(`truth-card-${randIdx}`);
+      
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Glow effect
+        const originalBorderColor = card.style.borderLeftColor;
+        card.style.borderColor = 'var(--color-primary-light)';
+        card.style.boxShadow = '0 0 20px rgba(136, 170, 141, 0.4)';
+        
+        playTone(520, 'sine', 0.15);
+        setTimeout(() => {
+          playTone(660, 'sine', 0.15);
+        }, 120);
+
+        showToast(`Reflita sobre a Verdade dura #${randIdx}`);
+
+        setTimeout(() => {
+          card.style.borderColor = '';
+          card.style.boxShadow = '';
+          card.style.borderLeftColor = originalBorderColor;
+        }, 2000);
+      }
+    });
+  }
+
+  // Save to diary
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      let checkedCount = 0;
+      cbItems.forEach(cb => { if (cb.checked) checkedCount++; });
+
+      if (checkedCount === 0) {
+        showToast("Marque pelo menos uma reflexão como concluída!");
+        playTone(200, 'sawtooth', 0.2);
+        return;
+      }
+
+      saveBtn.disabled = true;
+      saveBtn.textContent = 'Gravado!';
+      
+      registerResilienceAction(`Meditei e encarei ${checkedCount} verdades duras sobre a vida e incerteza`);
+      showToast("Reflexões salvas no Diário!");
+      playTone(660, 'sine', 0.25);
+      
+      if (checkedCount === cbItems.length) {
+        fireConfetti();
+      }
+
+      setTimeout(() => {
+        resetTruths();
+        document.getElementById('nav-diary-btn').click();
+      }, 1000);
+    });
+  }
+
+  function resetTruths() {
+    cbItems.forEach(cb => { cb.checked = false; cb.disabled = false; });
+    if (saveBtn) {
+      saveBtn.disabled = false;
+      saveBtn.textContent = 'Registrar Meditações no Diário';
+    }
+    updateProgress();
+  }
+
+  updateProgress();
+}
+
+function initAutoAnalysisSection() {
+  const relatoInput = document.getElementById('auto-analysis-relato');
+  const egoSlider = document.getElementById('ego-slider');
+  const egoVal = document.getElementById('ego-val');
+  const egoFeedback = document.getElementById('ego-feedback-msg');
+  const cbSteps = document.querySelectorAll('.cb-auto-step');
+  const saveBtn = document.getElementById('btn-save-auto-analysis');
+
+  if (!egoSlider) return;
+
+  egoSlider.addEventListener('input', () => {
+    const val = egoSlider.value;
+    egoVal.textContent = `${val}%`;
+
+    let feedbackMsg = '';
+    if (val <= 25) {
+      feedbackMsg = 'Humildade: Ego silenciado. Você tem plena abertura para identificar seus erros e priorizar a solução real.';
+    } else if (val <= 55) {
+      feedbackMsg = 'Equilíbrio: Seu ego tenta se justificar, mas há espaço para autocrítica sincera e reconhecimento de deslizes.';
+    } else if (val <= 80) {
+      feedbackMsg = 'Resistência: Você está gastando energia para provar que está certo. Cuidado para não focar apenas em autodefesa.';
+    } else {
+      feedbackMsg = 'Defesa Absoluta: Orgulho ativo. Você está tentando convencer a si mesmo de que é perfeito e a culpa é totalmente do outro.';
+    }
+
+    egoFeedback.textContent = feedbackMsg;
+    playTone(400 + val * 2, 'sine', 0.01);
+  });
+
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      const relato = relatoInput.value.trim();
+      const ego = egoSlider.value;
+      
+      let checkedCount = 0;
+      cbSteps.forEach(cb => { if (cb.checked) checkedCount++; });
+
+      if (!relato) {
+        showToast("Escreva um relato honesto do conflito primeiro!");
+        playTone(200, 'sawtooth', 0.2);
+        return;
+      }
+
+      saveBtn.disabled = true;
+      saveBtn.textContent = 'Gravado!';
+
+      const text = `Realizei Auto-análise: "${relato.substring(0, 60)}..." (Ego: ${ego}%, Checklist: ${checkedCount}/3)`;
+      registerResilienceAction(text);
+
+      showToast("Auto-análise registrada no Diário!");
+      playTone(660, 'sine', 0.25);
+      
+      if (ego <= 25 && checkedCount === 3) {
+        fireConfetti();
+      }
+
+      setTimeout(() => {
+        relatoInput.value = '';
+        egoSlider.value = 50;
+        egoVal.textContent = '50%';
+        egoFeedback.textContent = 'Equilíbrio: Seu ego tenta se justificar, mas há espaço para autocrítica sincera e reconhecimento de deslizes.';
+        cbSteps.forEach(cb => cb.checked = false);
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Registrar Auto-análise no Diário';
+        
+        document.getElementById('nav-diary-btn').click();
+      }, 1200);
+    });
+  }
 }

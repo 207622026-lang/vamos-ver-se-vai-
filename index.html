@@ -31,6 +31,9 @@
       <a href="#decision-section" class="nav-link" id="nav-decision-btn">Decisão Lógica</a>
       <a href="#motivation-section" class="nav-link" id="nav-motivation-btn">Fisiologia & Foco</a>
       <a href="#provocation-section" class="nav-link" id="nav-provocation-btn">Dignidade & Chat</a>
+      <a href="#complications-section" class="nav-link" id="nav-complications-btn">Pessoas Complicadas</a>
+      <a href="#hard-truths-section" class="nav-link" id="nav-hard-truths-btn">Verdades Duras</a>
+      <a href="#auto-analysis-section" class="nav-link" id="nav-auto-analysis-btn">Auto-análise</a>
       <a href="#philosophy-section" class="nav-link" id="nav-philosophy-btn">Filosofia de Vida</a>
       <a href="#diary-section" class="nav-link" id="nav-diary-btn">Diário</a>
     </nav>
@@ -454,17 +457,9 @@
         <!-- Interactive simulator box -->
         <div class="glass-card simulator-chat-card">
           <div class="simulator-hud">
-            <div class="scenario-selector-box">
-              <label for="scenario-selector" style="font-size:0.75rem; color:var(--text-secondary);">Debate Ativo:</label>
-              <select id="scenario-selector" class="input-field" style="padding:0.4rem; font-size:0.8rem; width:auto; display:inline-block; margin-left:0.5rem;">
-                <option value="0">ToxicGamer99 (Trash Talk em Equipe)</option>
-                <option value="1">ProfessorExigente (Cobrança Acadêmica)</option>
-                <option value="2">FighterRival (Provocação Duelo 1v1)</option>
-                <option value="3">ManipuladorEmocional (Triangulação & Chantagem)</option>
-              </select>
-            </div>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary-light); font-family: var(--font-title);">Treino de Blindagem Real</span>
             <div class="toxicity-gauge">
-              <span class="gauge-label">Escala de Conflito:</span>
+              <span class="gauge-label">Intensidade Emocional:</span>
               <div class="gauge-bar-bg">
                 <div class="gauge-bar-fill" id="toxicity-gauge-fill" style="width: 100%;"></div>
               </div>
@@ -483,42 +478,497 @@
           <div class="simulator-feedback" id="chat-scenario-feedback" style="display:none;"></div>
         </div>
 
-        <!-- Dignity cards grid -->
-        <div class="dignity-tips-grid">
+        <!-- Dignity cards grid / Guia de Estoicismo e Humilhação -->
+        <div class="dignity-guide-column" style="display:flex; flex-direction:column; gap:1.5rem;">
           
-          <div class="glass-card dignity-tip-card">
-            <h4 class="tip-card-title">🪨 Método da Pedra Cinzenta</h4>
-            <p class="tip-card-desc">
-              Diante de gaslighting ou manipulações de culpa, responda de forma monótona, apática e desinteressante. 
-              Ao não demonstrar reação emocional, você impede que o manipulador obtenha o controle da conversa.
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light); margin-bottom: 0.5rem;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">A Filosofia do Equilíbrio Real</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Você Não Precisa Reagir Perfeitamente Para Preservar Sua Dignidade</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Se tentarmos criar situações engessadas com respostas "perfeitas", corremos o risco de transformar a dignidade em um manual frio de comportamento, como se toda interação humana tivesse uma única resposta matematicamente correta. E a vida real não funciona assim.
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode estar com raiva, responder de maneira impulsiva, se arrepender cinco minutos depois, mudar de opinião, interpretar mal uma frase ou simplesmente falhar em reagir da forma mais saudável. <strong>Tudo isso faz parte de ser humano.</strong>
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Dignidade não significa ser uma rocha insensível ou um robô 100% compreensivo e educado.
+            </p>
+            
+            <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              <li><strong>Não significa nunca se irritar.</strong></li>
+              <li><strong>Não significa aceitar humilhação calado.</strong></li>
+              <li><strong>Não significa sempre responder com palavras mansas de terapeuta.</strong></li>
+            </ul>
+
+            <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 700; line-height: 1.6;">
+              Dignidade significa não deixar que a necessidade desesperada de provar seu valor faça você perder completamente o controle sobre suas próprias ações.
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes você vai responder mal. Vai se arrepender. Vai perceber que deveria ter ficado calado ou que não precisava ter respondido de forma tão gentil só para parecer maduro. 
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              <strong>O objetivo aqui não é te transformar em uma pessoa fria e puramente racional.</strong> É te ajudar a perceber o que aconteceu dentro de você depois de cada reação, e decidir o que fazer a partir daí.
+            </p>
+
+            <div style="background: rgba(255, 255, 255, 0.02); padding: 1.1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.86rem; color: var(--text-primary); line-height: 1.55; margin-top: 0.5rem;">
+              ✨ <strong>Ideia Central:</strong> Você não controla tudo o que sente. Nem sempre controla sua primeira reação. Mas pode aprender a perceber o que aconteceu dentro de você e decidir o que fazer a partir desse ponto.
+            </div>
+          </div>
+
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary);">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">A Filosofia da Blindagem</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">A Dicotomia do Controle no Desrespeito</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              O filósofo estoico Epicteto nos ensina uma regra simples e inabalável: 
+              <strong>algumas coisas estão sob nosso controle, outras não.</strong>
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Sob o nosso controle estão nossos julgamentos, nossas intenções de agir, nossas reações e nossa integridade.
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Fora do nosso controle estão as palavras dos outros, suas opiniões, suas tentativas de nos humilhar, a injustiça alheia e seus comportamentos rudes.
+            </p>
+            
+            <blockquote class="kierkegaard-quote" style="background: rgba(126, 163, 131, 0.04); border-left-color: var(--color-primary); margin: 0.5rem 0;">
+              "Se alguém te desrespeita ou te insulta, lembre-se de que ele age assim por acreditar que esse é o seu papel. Ele não pode seguir o que te parece correto, mas apenas o que a ele próprio parece."
+              <cite>— Epicteto | "Manual de Epicteto"</cite>
+            </blockquote>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Quando você compreende que o insulto alheio é uma ação fora de seu domínio, a corda emocional que te ligava à provocação é cortada. 
+              <strong>A tentativa de humilhação descreve quem ataca, não quem é atacado.</strong> Ela funciona como um espelho da desorganização interna do agressor.
             </p>
           </div>
 
-          <div class="glass-card dignity-tip-card">
-            <h4 class="tip-card-title">🧘 Postura Monótona em Duelos 1v1</h4>
-            <p class="tip-card-desc">
-              Em duelos diretos, o rival que exibe sua vitória busca ver sua raiva ou desculpas. 
-              Responder com apatia apática ("Jogou bem. Foi isso.") destrói a recompensa dopaminérgica dele e desarma o confronto.
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent);">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Táticas de Autoproteção</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Como Neutralizar o Ataque</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Diante de situações de humilhação ativa, agressividade social ou tentativas de menosprezo profissional, aplique os seguintes protocolos:
+            </p>
+
+            <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>
+                <strong>O Silêncio Tático (A Pausa de 3 Segundos):</strong> 
+                Quando alguém te disser algo ofensivo, não responda de imediato. Olhe nos olhos da pessoa em silêncio por 3 segundos antes de falar. Essa pausa interrompe o fluxo reativo e força o agressor a confrontar o peso de seu próprio desrespeito.
+              </li>
+              <li>
+                <strong>A Técnica do Fogging Técnico:</strong> 
+                Concorde com a parte objetiva e factual do que foi dito, descartando a carga ofensiva. Se dizem: <em>"Esse trabalho está um lixo!"</em>, responda: <em>"De fato, a estrutura técnica precisa de ajustes. O que especificamente você propõe alterar?"</em>.
+              </li>
+              <li>
+                <strong>O Mute Emocional:</strong> 
+                Enxergue a pessoa desrespeitosa como um personagem de IA com comportamento programado e previsível. Você não se irrita com uma IA programada para falhar; você apenas contorna o obstáculo de forma analítica.
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent); margin-top: 1rem;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Autoavaliação e Realidade</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Quando o Outro Parece Ter Razão e Você Se Sente Inferior</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Essa é a parte mais difícil e mais humana da nossa existência. Entender a dor de não conseguir contradizer os fatos (as conquistas do outro) exige clareza mental. 
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              O erro não está em negar que a outra pessoa tocou instrumentos, fala línguas ou tira boas notas, mas em aceitar que esses fatos a tornam um ser humano superior, ou que tornam você um fracasso.
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 700; line-height: 1.6;">
+              Guia Tático: Quando a Lógica da Superioridade Te Ataca
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Quando alguém que você gosta ou respeita usa uma lista de "vitórias" para te humilhar e você sente que não tem argumentos, você se sente sem chão. A sensação é de que xingar é a única defesa, mas é uma solução temporária que te deixa se sentindo ainda pior depois.
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Aqui está como lidar com isso, passo a passo, sem negar a realidade:
+            </p>
+
+            <div style="background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); display: flex; flex-direction: column; gap: 0.85rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; font-family: var(--font-title);">1. Separe o Fato da Intenção (A Regra da Realidade vs. Manipulação):</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">
+                <strong>Fato:</strong> Ele toca instrumentos, fala línguas, tem notas melhores, tem namorada, é mais extrovertido. Sim, isso pode ser verdade.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">
+                <strong>Intenção:</strong> Ele está usando essa lista para te humilhar, controlar a narrativa da briga e se sentir poderoso ao te ver sofrer. Isso é o que está errado.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-primary); font-weight: 700; line-height: 1.55;">
+                Sua Ação Mínima: Reconheça o fato, mas desmonte a intenção. Não lute contra os instrumentos que ele toca, lute contra a ideia de que tocar piano o dá o direito de te pisar.
+              </p>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); display: flex; flex-direction: column; gap: 0.85rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; font-family: var(--font-title);">2. O Método da Pedra Cinzenta (Grey Rock) - Nível 1: Não Reaja, Apenas Reconheça:</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">
+                <strong>O Que É:</strong> Se transformar em uma "pedra cinzenta" — chata, sem graça e que não fornece a reação emocional que a outra pessoa quer.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">
+                <strong>Como Usar Quando Ele Tem "Razão":</strong> A outra pessoa quer que você fique com raiva, chore ou invente desculpas (o que valida a superioridade dela). Sua Ação Mínima é responder com um reconhecimento monossilábico e sem emoção, validando o fato e parando por aí.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--color-primary-light); font-weight: 700; line-height: 1.55;">
+                A Resposta Tática: "Sim.", "É verdade.", "Sim, você tem excelentes conquistas.". Não adicione um "mas...", não se justifique. Deixe o silêncio reinar. Ele vai ficar confuso porque não obteve a reação emocional que queria.
+              </p>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); display: flex; flex-direction: column; gap: 0.85rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; font-family: var(--font-title);">3. Reconheça sem se diminuir:</h4>
+              
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">
+                <strong>Sua posição:</strong> Você não precisa negar que a outra pessoa é boa. Talvez ela realmente seja melhor que você em algumas coisas. O problema começa quando ela transforma isso em uma forma de te colocar abaixo dela.
+              </p>
+              
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">
+                <strong>Respostas possíveis:</strong>
+              </p>
+              
+              <blockquote style="font-style: italic; color: var(--color-primary-light); border-left: 2px solid var(--color-primary-light); padding-left: 0.75rem; font-size: 0.85rem; margin: 0.25rem 0; background: none; padding-top: 0; padding-bottom: 0;">
+                "Parabéns. Você pode ser melhor que eu em certas coisas. Isso não te faz melhor que ninguém."
+              </blockquote>
+              
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">Ou simplesmente:</p>
+              
+              <blockquote style="font-style: italic; color: var(--color-primary-light); border-left: 2px solid var(--color-primary-light); padding-left: 0.75rem; font-size: 0.85rem; margin: 0.25rem 0; background: none; padding-top: 0; padding-bottom: 0;">
+                "Parabéns."
+              </blockquote>
+              
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">E, se quiser responder à provocação:</p>
+              
+              <blockquote style="font-style: italic; color: var(--color-accent); border-left: 2px solid var(--color-accent); padding-left: 0.75rem; font-size: 0.85rem; margin: 0.25rem 0; background: none; padding-top: 0; padding-bottom: 0;">
+                "Se você precisa da minha validação, baseada na minha derrota ou inferioridade, então parabéns. Você é muito bom."
+              </blockquote>
+              
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin-top: 0.5rem;">
+                <strong>Por que funciona:</strong> Você não entra na competição que a outra pessoa está tentando criar. Não precisa inventar uma superioridade sua, nem fingir que as conquistas dela não existem. Você reconhece e encerra.
+              </p>
+              
+              <p style="font-size: 0.85rem; color: var(--text-primary); font-weight: 700; line-height: 1.55;">
+                Às vezes, a melhor resposta para alguém tentando provar que é melhor que você é simplesmente não oferecer a importância que essa comparação está procurando.
+              </p>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); display: flex; flex-direction: column; gap: 0.85rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; font-family: var(--font-title);">4. Entenda o Propósito da Comparação:</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">
+                <strong>A Verdade Dura:</strong> Se ele realmente fosse superior e estivesse em paz consigo mesmo, ele não precisaria de uma briga para listar as conquistas dele e te humilhar. Ele está inseguro e precisa da sua sensação de inferioridade para se sentir estável.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-primary); font-weight: 700; line-height: 1.55;">
+                Sua Ação Mínima: Não fornece o alimento para a insegurança dele. O seu silêncio ou a sua resposta pragmática são mais fortes do que qualquer grito.
+              </p>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); display: flex; flex-direction: column; gap: 0.85rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; font-family: var(--font-title);">5. Quando Não Soubermos Como Agir, o Próximo Passo Mínimo É O Silêncio:</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">
+                <strong>A Verdade Máxima:</strong> Às vezes, a dor é tão grande que nenhuma resposta tática sai. E está tudo bem. A sua falta de reação (não gritar, não chorar, não se justificar, apenas ficar em silêncio olhando para ele) é a maior demonstração de força.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-primary); font-weight: 700; line-height: 1.55;">
+                É uma ação mínima que diz: "O seu ataque não me quebrou o suficiente para eu perder o controle".
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    </section>
+
+    <!-- SEÇÃO 5: AUTO-ANÁLISE (NEW) -->
+    <section class="section-block" id="auto-analysis-section">
+      <div class="section-header">
+        <span class="section-tag">Autoconsciência Prática</span>
+        <h2 class="section-title">Auto-análise: Olhe para si antes de olhar para o outro</h2>
+        <p class="section-subtitle">Não adianta entender tanto sobre as pessoas, saber diferenciar o certo do errado, reconhecer comportamentos tóxicos e saber exatamente o que alguém deveria ter feito... se você nunca consegue perceber quando <strong>você</strong> está errado.</p>
+      </div>
+
+      <div class="provocation-layout">
+        
+        <!-- Painel de Auto-análise Interativa (Lado Esquerdo) -->
+        <div class="glass-card simulator-chat-card" style="position: sticky; top: 100px; align-self: start; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; border-top: 4px solid var(--color-accent);">
+          <div>
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.1em; display: block; margin-bottom: 0.25rem;">Ferramenta Prática</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.25rem; font-weight: 700; color: #ffffff; margin: 0;">Desarmando o Ego</h3>
+          </div>
+
+          <div class="scribble-container">
+            <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);">Relato Honesto do Conflito:</label>
+            <textarea id="auto-analysis-relato" class="scribble-input-field" placeholder="Escreva aqui o que aconteceu. O que você falou ou fez? Escreva sem tentar se justificar ou arrumar culpados..." style="min-height: 120px; font-size: 0.88rem;"></textarea>
+          </div>
+
+          <!-- Ego Slider -->
+          <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);">Nível de Influência do Ego:</span>
+              <span style="font-size: 0.95rem; font-weight: 800; color: var(--color-accent); font-family: var(--font-title);" id="ego-val">50%</span>
+            </div>
+            <input type="range" id="ego-slider" min="0" max="100" value="50" style="width: 100%; accent-color: var(--color-accent); cursor: pointer;">
+            <div style="font-size: 0.78rem; line-height: 1.4; color: var(--text-primary); font-style: italic; transition: all 0.2s ease;" id="ego-feedback-msg">
+              "Equilíbrio: Seu ego está tentando encontrar uma justificativa para o seu comportamento, mas há abertura para analisar seu erro."
+            </div>
+          </div>
+
+          <!-- Small checklist of self-questions -->
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 0.05em;">Critérios de Consciência:</span>
+            
+            <label class="check-label-sense" style="cursor: pointer;">
+              <input type="checkbox" class="cb-auto-step" data-index="1">
+              <span>Percebi meu tom de voz e palavras</span>
+            </label>
+            <label class="check-label-sense" style="cursor: pointer;">
+              <input type="checkbox" class="cb-auto-step" data-index="2">
+              <span>Entendi qual era a minha intenção (vencer vs resolver)</span>
+            </label>
+            <label class="check-label-sense" style="cursor: pointer;">
+              <input type="checkbox" class="cb-auto-step" data-index="3">
+              <span>Admiti minha parcela de culpa no problema</span>
+            </label>
+          </div>
+
+          <button class="btn btn-primary" id="btn-save-auto-analysis" style="width: 100%; background: var(--color-accent); color: var(--bg-dark); box-shadow: 0 4px 15px var(--color-accent-glow);">
+            Registrar Auto-análise no Diário
+          </button>
+        </div>
+
+        <!-- Mural da Auto-análise (Lado Direito) -->
+        <div class="dignity-guide-column" style="display:flex; flex-direction:column; gap:1.5rem;">
+          
+          <!-- Card 1: É fácil analisar os outros -->
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent);">
+            <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.01); align-self: flex-start;">Ego & Julgamento</span>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              É muito fácil analisar os outros.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              É fácil perceber quando alguém foi arrogante, quando respondeu mal, quando exagerou, quando foi injusto ou quando tomou uma decisão ruim.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              O difícil é parar e perguntar: "E eu? O que eu fiz nessa situação?"
+            </div>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes passamos tanto tempo procurando argumentos para nos defender que esquecemos de analisar nossas próprias atitudes.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Começamos a procurar quem está errado, em vez de procurar <strong>o que aconteceu de verdade</strong>.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E isso pode acontecer até quando estamos certos.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode estar certo sobre o que aconteceu e ainda assim ter falado de uma maneira desnecessariamente agressiva.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode ter razão em uma discussão e ainda ter provocado a outra pessoa.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode ter sido magoado e ainda ter magoado alguém de volta.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode ter colocado um limite correto e ainda ter feito isso da pior maneira possível.
+            </p>
+
+            <div style="background: rgba(191, 97, 106, 0.05); padding: 1rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-danger); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              ⚠️ Estar certo sobre uma coisa não significa estar certo sobre tudo naquela situação.
+            </div>
+          </div>
+
+          <!-- Card 2: Analise os pequenos passos -->
+          <div class="glass-card dignity-article-card" id="auto-analysis-steps-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light);">
+            <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.01); align-self: flex-start;">Autocrítica Prática</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Analise os pequenos passos</h3>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Não olhe apenas para o resultado final. Volte um pouco.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; background: rgba(0,0,0,0.15); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem;">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-secondary);">
+                <span>• O que você falou?</span>
+                <span>• Como falou?</span>
+                <span>• Por que falou?</span>
+                <span>• O que estava sentindo naquele momento?</span>
+                <span>• O que a outra pessoa disse antes?</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-secondary);">
+                <span>• Como você interpretou?</span>
+                <span>• Havia outra maneira de responder?</span>
+                <span>• Você queria resolver o problema ou apenas vencer a discussão?</span>
+                <span>• Você estava tentando se explicar ou estava tentando provar que era melhor?</span>
+              </div>
+            </div>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Essas pequenas perguntas podem revelar coisas que, no calor do momento, simplesmente não percebemos.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes o problema não começou na grande discussão. Começou em uma pequena provocação. Depois veio uma resposta. Depois outra. Depois alguém tentou se defender. Depois alguém quis ter a última palavra.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 700; line-height: 1.6;">
+              E quando perceberam, estavam discutindo por algo que já nem lembravam mais como começou.
             </p>
           </div>
 
-          <div class="glass-card dignity-tip-card" style="border-left: 2px solid var(--color-primary-light);">
-            <h4 class="tip-card-title">🚫 O "Mute" Emocional</h4>
-            <p class="tip-card-desc">
-              Trate o provocador como uma IA de teste ou como um ruído técnico de fundo. 
-              Não personalize o ataque. A agressão dele descreve a imaturidade de quem ataca, não a sua dignidade.
+          <!-- Card 3: Esqueça o ego por alguns minutos -->
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent);">
+            <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.01); align-self: flex-start;">Ego & Vulnerabilidade</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Esqueça o ego por alguns minutos</h3>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              O ego quer estar certo. Quer vencer. Quer ter a última palavra. Quer mostrar que você não é fraco. Quer encontrar uma justificativa para cada erro.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E, principalmente, não gosta de admitir: "Eu errei."
+            </p>
+
+            <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 0.65rem;">
+              <span style="font-size: 0.88rem; color: var(--text-secondary);">Admitir um erro não diminui você. Na verdade, pode ser uma das coisas mais difíceis de fazer. Dizer:</span>
+              <blockquote style="font-style: italic; color: var(--text-primary); border-left: 2px solid var(--color-accent); padding-left: 0.75rem; font-size: 0.9rem; margin: 0.35rem 0;">
+                "Nessa parte eu errei."<br>
+                "Eu exagerei."<br>
+                "Eu poderia ter feito diferente."<br>
+                "Eu entendi a situação errado."
+              </blockquote>
+            </div>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              dizer isso não significa perder. Significa que você conseguiu olhar para si mesmo sem precisar se defender de tudo.
             </p>
           </div>
 
-          <div class="glass-card dignity-tip-card">
-            <h4 class="tip-card-title">⚔️ Regra do FT5/FT10 Fictício</h4>
-            <p class="tip-card-desc">
-              Aceite que perder partidas para adversários mais treinados ou em dias ruins faz parte da amostragem estatística de evolução, e não representa o teto das suas habilidades técnicas.
+          <!-- Card 4: Não transforme emoção em decisão -->
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light);">
+            <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.01); align-self: flex-start;">Autocontrole</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Não transforme emoção em decisão</h3>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Sentir raiva não significa que você precisa agir com raiva.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Sentir ciúmes não significa que você precisa acusar alguém.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Sentir medo não significa que você precisa fugir.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Sentir vontade de responder não significa que precisa responder naquele momento.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              As emoções são reais e importantes, mas elas não precisam segurar o volante o tempo inteiro.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              🧘 Às vezes, o melhor que você pode fazer é esperar alguns minutos e perguntar: "Se eu fizer isso agora, vou estar resolvendo alguma coisa ou só reagindo ao que estou sentindo?"
+            </div>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso não significa virar uma pessoa fria. Você continuará sentindo raiva, tristeza, ciúme, orgulho, medo e frustração. A diferença é que você começa a escolher o que fazer com essas emoções.
+            </p>
+          </div>
+
+          <!-- Card 5: Mas eu estava certo! -->
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent);">
+            <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.01); align-self: flex-start;">Verdade de Relações</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">"Mas eu estava certo!"</h3>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Talvez estivesse. E ainda assim vale a pena olhar para o seu próprio comportamento.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Imagine que alguém realmente tenha te tratado mal. Você não precisa fingir que não aconteceu. Mas também pode perguntar:
+            </p>
+            <blockquote style="font-style: italic; color: var(--text-primary); border-left: 2px solid var(--color-accent); padding-left: 0.75rem; font-size: 0.9rem; margin: 0.5rem 0;">
+              "Como eu respondi?"<br>
+              "Eu precisava ter ido tão longe?"<br>
+              "Eu disse alguma coisa que não deveria?"<br>
+              "Eu poderia ter colocado o mesmo limite sem transformar aquilo em uma guerra?"
+            </blockquote>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Reconhecer a sua parte <strong>não apaga a parte da outra pessoa</strong>.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você não precisa escolher entre: <strong>"A culpa é toda minha."</strong> ou <strong>"A culpa é toda dela."</strong>
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 700; line-height: 1.6;">
+              Às vezes a verdade está no meio.
+            </p>
+          </div>
+
+          <!-- Card 6: Sempre existe alguma coisa para melhorar -->
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light);">
+            <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.01); align-self: flex-start;">Crescimento Pessoal</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Sempre existe alguma coisa para melhorar</h3>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso não significa que você é uma pessoa ruim. Significa que você é uma pessoa. Ninguém chega a um ponto em que não precisa mais aprender.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode ser uma pessoa carinhosa e ainda ser egoísta às vezes. Pode ser paciente e perder a cabeça. Pode ser responsável e cometer irresponsabilidades. Pode amar alguém e ainda machucá-la. Pode ter boas intenções e mesmo assim fazer algo errado.
+            </p>
+            
+            <div style="background: rgba(136,170,141,0.05); padding: 1rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-primary); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              🌿 Ser uma boa pessoa não significa nunca fazer coisas ruins. Significa ser capaz de reconhecê-las e tentar fazer diferente.
+            </div>
+          </div>
+
+          <!-- Card 7: Faça uma pergunta que quase ninguém gosta de fazer -->
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent);">
+            <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.2rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.01); align-self: flex-start;">A Pergunta Chave</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Faça uma pergunta que quase ninguém gosta de fazer</h3>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Depois de uma situação difícil, em vez de perguntar apenas: "O que essa pessoa fez de errado?", pergunte também:
+            </p>
+            <blockquote style="font-style: italic; color: var(--text-primary); border-left: 2px solid var(--color-accent); padding-left: 0.75rem; font-size: 0.95rem; margin: 0.5rem 0; font-weight: 700;">
+              "O que eu fiz nessa situação que eu não gostaria de repetir?"
+            </blockquote>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Talvez a resposta seja nada. Talvez você realmente não tenha feito nada de errado. Mas talvez descubra alguma coisa.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E se descobrir, não use isso para se destruir. Use para melhorar. A intenção não é transformar autocrítica em culpa. É transformar <strong>consciência em mudança</strong>.
             </p>
           </div>
 
         </div>
 
+      </div>
+
+      <!-- Ideia Principal / Conclusão (Em Destaque) -->
+      <div class="glass-card" style="margin-top: 2.5rem; padding: 2.5rem; border-top: 4px solid var(--color-accent); display: flex; flex-direction: column; gap: 1.25rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.1em; display: block;">Consciência Suprema</span>
+        <h3 style="font-family: var(--font-title); font-size: 1.5rem; font-weight: 700; color: #ffffff; line-height: 1.4;">
+          Você não precisa estar sempre errado para aprender. E não precisa estar sempre certo para ter valor.
+        </h3>
+        
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin: 0 auto;">
+          Esqueça o ego por alguns minutos. Pare de procurar apenas argumentos para se defender. Olhe para os seus próprios passos, inclusive os pequenos.
+        </p>
+
+        <p style="font-size: 1.05rem; color: var(--text-primary); font-family: var(--font-title); font-style: italic; line-height: 1.7; font-weight: 600;">
+          "Você pode ter razão. Pode ter sido injustiçado. Pode ter sido magoado. E ainda assim existir alguma coisa em você que pode melhorar."
+        </p>
+
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin: 0 auto;">
+          Reconhecer isso não te torna menor. É justamente o que permite que você se torne alguém melhor do que era ontem.
+        </p>
       </div>
     </section>
 
@@ -867,6 +1317,744 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: COMO LIDAR COM PESSOAS COMPLICADAS -->
+    <section class="section-block" id="complications-section">
+      <div class="section-header">
+        <span class="section-tag">Relações & Reciprocidade</span>
+        <h2 class="section-title">Como Lidar com Pessoas Complicadas</h2>
+        <p class="section-subtitle">Aprenda a decifrar a falta de reciprocidade, as fases de afastamento e o limite entre compreender e tolerar o sofrimento.</p>
+      </div>
+
+      <div class="provocation-layout">
+        
+        <!-- Painel Interativo de Diagnóstico (Lado Esquerdo) -->
+        <div class="glass-card simulator-chat-card" style="position: sticky; top: 100px; align-self: start;">
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary-light); font-family: var(--font-title); display: block; margin-bottom: 1rem;">Termômetro de Reciprocidade</span>
+          
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+            Antes de continuar gastando energia e se esforçando por alguém, avalie objetivamente estes três critérios na relação:
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.5rem;">
+            <label class="check-label-sense" style="background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; transition: var(--transition-fast);">
+              <input type="checkbox" id="recip-cb-interest" style="margin-top: 0.15rem;">
+              <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">
+                <strong>A pessoa demonstra interesse?</strong> (Inicia mensagens, puxa papo espontaneamente ou te procura quando sente saudade)
+              </span>
+            </label>
+
+            <label class="check-label-sense" style="background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; transition: var(--transition-fast);">
+              <input type="checkbox" id="recip-cb-effort" style="margin-top: 0.15rem;">
+              <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">
+                <strong>Ela faz algum esforço?</strong> (Propõe encontros, escuta ativa, responde com atenção e participa do fluxo da conversa)
+              </span>
+            </label>
+
+            <label class="check-label-sense" style="background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; transition: var(--transition-fast);">
+              <input type="checkbox" id="recip-cb-care" style="margin-top: 0.15rem;">
+              <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">
+                <strong>Ela se importa quando te machuca?</strong> (Pede desculpas sinceras e muda de comportamento quando percebe que a atitude dela te feriu)
+              </span>
+            </label>
+          </div>
+
+          <button class="btn btn-primary" id="btn-assess-reciprocity" style="width: 100%; margin-bottom: 1.25rem;">Avaliar Equilíbrio da Relação</button>
+
+          <div class="simulator-feedback" id="assessment-feedback-el" style="display: none; margin-bottom: 1.5rem;">
+            <!-- Dinâmico -->
+          </div>
+
+          <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1.5rem 0 1.25rem 0;">
+
+          <!-- Simulador de Mensagem Seca -->
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-accent); font-family: var(--font-title); display: block; margin-bottom: 0.75rem;">Simulador de Conversa Seca</span>
+          
+          <div class="simulator-chat-box" style="height: 200px; margin-bottom: 1rem; padding: 0.75rem;" id="dry-chat-container">
+            <div class="chat-bubble user">Como foi seu dia?</div>
+            <div class="chat-bubble opponent"><strong style="display:block; font-size:0.7rem; margin-bottom:0.15rem; opacity:0.85;">Outro</strong>Normal.</div>
+            <div class="chat-bubble user">Aconteceu alguma coisa?</div>
+            <div class="chat-bubble opponent"><strong style="display:block; font-size:0.7rem; margin-bottom:0.15rem; opacity:0.85;">Outro</strong>Não.</div>
+            <div class="chat-bubble user">Quer fazer alguma coisa mais tarde?</div>
+            <div class="chat-bubble opponent"><strong style="display:block; font-size:0.7rem; margin-bottom:0.15rem; opacity:0.85;">Outro</strong>Talvez.</div>
+          </div>
+
+          <button class="btn btn-secondary btn-sm" id="btn-dry-retreat" style="width: 100%;">Simular Recuo (Dar Espaço)</button>
+          
+          <div id="dry-retreat-feedback" style="display: none; margin-top: 0.75rem; font-size: 0.82rem; line-height: 1.5; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+            <!-- Dinâmico -->
+          </div>
+        </div>
+
+        <!-- Coluna de Artigos (Lado Direito) -->
+        <div class="dignity-guide-column" style="display:flex; flex-direction:column; gap:1.5rem;">
+          
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light);">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">A Natureza das Diferenças</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Conviver com Outros é Aceitar Ritmos Diferentes</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Conviver com outras pessoas significa lidar com comportamentos que não entendemos, que nos irritam ou que simplesmente são muito diferentes dos nossos.
+            </p>
+
+            <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Tem gente que demonstra carinho conversando o tempo todo. Tem gente que quase não conversa.</li>
+              <li>Tem gente que procura você quando sente saudade. Tem gente que desaparece e volta como se nada tivesse acontecido.</li>
+              <li>Tem gente que demonstra interesse facilmente. Tem gente que parece interessada em um dia e completamente indiferente no outro.</li>
+            </ul>
+
+            <div style="background: rgba(255, 255, 255, 0.02); padding: 1.1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.86rem; color: var(--text-primary); line-height: 1.55;">
+              ⚖️ <strong>A Realidade Difícil:</strong> Nem sempre o problema é que alguém está errado. Às vezes, vocês simplesmente funcionam de maneiras diferentes. Pessoas diferentes nem sempre são pessoas incompatíveis. O problema aparece quando as diferenças produzem sofrimento constante e nenhum dos dois consegue encontrar um meio-termo.
+            </div>
+          </div>
+
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent);">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Comportamento Inconstante</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">E quando a pessoa é "de lua"?</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Algumas pessoas parecem funcionar em fases. Em uma semana querem conversar com você o tempo inteiro: mandam mensagem, procuram, demonstram carinho, querem sua companhia. Depois, de repente, ficam distantes, respondem pouco, parecem não se importar. E algum tempo depois voltam a agir normalmente.
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso pode ser confuso porque você começa a tentar descobrir: <em>"O que eu fiz?"</em>. E às vezes a resposta é: <strong>nada.</strong>
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              O humor, a energia, os problemas e as prioridades da outra pessoa também mudam. Você não precisa interpretar cada mudança como uma avaliação sobre o seu valor.
+            </p>
+
+            <div style="background: rgba(235, 203, 139, 0.05); border: 1px solid rgba(235, 203, 139, 0.15); padding: 1.1rem; border-radius: var(--radius-sm); font-size: 0.88rem; color: var(--color-warning); line-height: 1.6;">
+              🌙 <strong>Não tente acompanhar a lua da outra pessoa:</strong> Se alguém está extremamente carinhoso hoje, você não precisa imediatamente entregar tudo. Se amanhã essa pessoa estiver distante, você também não precisa correr atrás desesperadamente tentando recuperar a atenção dela. Você pode gostar de alguém sem transformar cada mudança de comportamento dessa pessoa em uma mudança no seu próprio estado emocional.
+            </div>
+
+            <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 700; line-height: 1.6; text-align: center; margin-top: 0.5rem;">
+              Ela se aproximou? Aproveite. Ela se afastou? Dê espaço. Ela voltou? Observe.
+            </p>
+          </div>
+
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light);">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">Esforço Unilateral</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">"Parece que só eu estou me esforçando"</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Essa talvez seja uma das sensações mais desgastantes em qualquer relação. Você manda mensagem, marca encontros, pergunta como a pessoa está, tenta resolver os problemas, demonstra carinho, procura. E começa a perceber que, quando você para... nada acontece.
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso dói porque faz surgir uma pergunta: <strong>"Se eu parar de tentar, essa pessoa ainda vai tentar por mim?"</strong> E às vezes a resposta é não. E isso é doloroso, mas também é uma informação importante.
+            </p>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              <strong>Reciprocidade não significa fazer exatamente a mesma coisa.</strong> Não significa que se você mandou dez mensagens, a pessoa precisa mandar dez. As pessoas demonstram interesse de maneiras diferentes. O que importa é perceber se existe esforço dos dois lados, mesmo que ele apareça de formas distintas.
+            </p>
+
+            <div style="background: rgba(191, 97, 106, 0.05); border: 1px solid rgba(191, 97, 106, 0.15); padding: 1.1rem; border-radius: var(--radius-sm); font-size: 0.88rem; color: var(--color-danger); line-height: 1.6;">
+              🛑 <strong>Não transforme compreensão em tolerância infinita:</strong> Entender alguém não significa aceitar qualquer coisa. Você pode entender que uma pessoa está passando por uma fase ruim e ainda assim reconhecer: <em>"Eu gosto de você, mas a forma como estamos nos relacionando está me machucando."</em> Compreender não obriga você a permanecer.
+            </div>
+          </div>
+
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent);">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Limites de Comunicação</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Quando Conversar Não Resolve</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Existe uma tendência de acreditar que qualquer problema pode ser resolvido com a conversa certa. Nem sempre. Às vezes você explica, a pessoa entende, promete mudar, e depois tudo volta ao mesmo lugar.
+            </p>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Nesse caso, talvez o problema não seja falta de comunicação. Talvez seja falta de vontade. E isso é algo que você não consegue resolver pela outra pessoa.
+            </p>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Quando realmente não existe reciprocidade, você não consegue fazer uma relação funcionar sozinho. Você precisa parar de perguntar: <em>"Como faço essa pessoa gostar mais de mim?"</em> e começar a se perguntar: <strong>"Essa relação, do jeito que ela existe hoje, está me fazendo bem?"</strong>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Ideia Principal / Conclusão (Em Destaque) -->
+      <div class="glass-card" style="margin-top: 2.5rem; padding: 2.5rem; border-top: 4px solid var(--color-primary-light); display: flex; flex-direction: column; gap: 1.25rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.1em; display: block;">Ideia Central da Seção</span>
+        <h3 style="font-family: var(--font-title); font-size: 1.5rem; font-weight: 700; color: #ffffff; line-height: 1.4;">
+          Você não precisa entender completamente uma pessoa para decidir como quer ser tratado por ela.
+        </h3>
+        
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin: 0 auto;">
+          Algumas pessoas vão gostar de você e demonstrar isso de maneiras diferentes. Outras vão gostar, mas não conseguir oferecer aquilo que você precisa. E algumas simplesmente não terão o mesmo interesse que você. Isso pode doer, mas não significa que exista algo de errado com você.
+        </p>
+
+        <p style="font-size: 1.05rem; color: var(--text-primary); font-family: var(--font-title); font-style: italic; line-height: 1.7; font-weight: 600;">
+          "Nem toda distância precisa ser perseguida. Nem todo silêncio precisa ser preenchido. Nem toda relação precisa ser salva."
+        </p>
+
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin: 0 auto;">
+          Às vezes, lidar com uma pessoa complicada significa aprender a compreendê-la. Outras vezes, significa aprender até onde vale a pena ir por ela.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6: VERDADES DURAS DE LIDAR -->
+    <section class="section-block" id="hard-truths-section">
+      <div class="section-header">
+        <span class="section-tag">Estoicismo Real</span>
+        <h2 class="section-title">Verdades Duras de Lidar</h2>
+        <p class="section-subtitle">Nem tudo na vida vai ser justo, previsível ou do jeito que gostaríamos. Algumas coisas não podem ser consertadas. Algumas pessoas vão embora. Algumas escolhas vão dar errado. E algumas respostas que queremos simplesmente nunca vão chegar. Aceitar isso não significa gostar dessas coisas. Significa parar de lutar contra o fato de que elas fazem parte da vida.</p>
+      </div>
+
+      <div class="provocation-layout">
+        
+        <!-- Painel de Meditação Estóica & Progresso (Lado Esquerdo) -->
+        <div class="glass-card simulator-chat-card" style="position: sticky; top: 100px; align-self: start; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; border-top: 4px solid var(--color-primary-light);">
+          <div>
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.1em; display: block; margin-bottom: 0.25rem;">Estoicismo Prático</span>
+            <h3 style="font-family: var(--font-title); font-size: 1.25rem; font-weight: 700; color: #ffffff; margin: 0;">Progresso de Aceitação</h3>
+          </div>
+          
+          <!-- Circular Progress Container -->
+          <div style="display: flex; align-items: center; gap: 1.25rem; background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <!-- SVG Progress Ring -->
+            <div style="position: relative; width: 68px; height: 68px; flex-shrink: 0;">
+              <svg width="68" height="68" viewBox="0 0 68 68" style="transform: rotate(-90deg);">
+                <circle cx="34" cy="34" r="28" stroke="rgba(255,255,255,0.05)" stroke-width="5" fill="transparent"></circle>
+                <circle cx="34" cy="34" r="28" id="truth-progress-ring" stroke="var(--color-primary-light)" stroke-width="5" fill="transparent" stroke-dasharray="175.9" stroke-dashoffset="175.9" style="transition: stroke-dashoffset 0.4s ease, stroke 0.4s ease;"></circle>
+              </svg>
+              <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-size: 0.95rem; font-weight: 700; color: #ffffff;" id="truth-progress-pct">0%</div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.15rem;">
+              <span style="font-size: 1.15rem; font-weight: 800; color: #ffffff; font-family: var(--font-title);" id="truth-progress-val">0 / 13</span>
+              <span style="font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Verdades Meditadas</span>
+            </div>
+          </div>
+
+          <!-- Mini Grid of Indicators -->
+          <div>
+            <span style="font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.75rem;">Mural de Reflexões (13)</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;" id="truth-mini-grid">
+              <span class="mini-truth-dot" data-dot="1" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">1</span>
+              <span class="mini-truth-dot" data-dot="2" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">2</span>
+              <span class="mini-truth-dot" data-dot="3" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">3</span>
+              <span class="mini-truth-dot" data-dot="4" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">4</span>
+              <span class="mini-truth-dot" data-dot="5" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">5</span>
+              <span class="mini-truth-dot" data-dot="6" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">6</span>
+              <span class="mini-truth-dot" data-dot="7" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">7</span>
+              <span class="mini-truth-dot" data-dot="8" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">8</span>
+              <span class="mini-truth-dot" data-dot="9" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">9</span>
+              <span class="mini-truth-dot" data-dot="10" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">10</span>
+              <span class="mini-truth-dot" data-dot="11" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">11</span>
+              <span class="mini-truth-dot" data-dot="12" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">12</span>
+              <span class="mini-truth-dot" data-dot="13" style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-secondary); transition: all 0.3s ease; background: rgba(255,255,255,0.01); font-weight: 600;">13</span>
+            </div>
+          </div>
+
+          <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.55; margin: 0;">
+            A aceitação não é gostar ou concordar. É encarar a realidade como ela se apresenta, desarmando o sofrimento reativo.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+            <button class="btn btn-primary" id="btn-meditate-random-truth" style="width: 100%;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              Meditar em Verdade Aleatória
+            </button>
+            <button class="btn btn-secondary btn-sm" id="btn-save-truths-diary" style="width: 100%;">Registrar Meditações no Diário</button>
+          </div>
+        </div>
+
+        <!-- Mural das Verdades Duras (Lado Direito) -->
+        <div class="dignity-guide-column" style="display:flex; flex-direction:column; gap:1.5rem;">
+          
+          <!-- Verdade 1 -->
+          <div class="glass-card dignity-article-card" id="truth-card-1" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">Verdade 01</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="1"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Esteja sempre pronto para ficar sozinho</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              As pessoas mudam.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Hoje alguém pode olhar para você e pensar que você é uma das pessoas mais importantes da vida dela. Amanhã, talvez os caminhos mudem, os sentimentos mudem, as prioridades mudem e vocês se afastem.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso pode acontecer com amigos, namorados, familiares e até com pessoas que você jurava que estariam para sempre.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              É uma das coisas mais dolorosas de aceitar.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Mas existe uma diferença entre amar alguém e precisar que aquela pessoa permaneça para que você consiga ficar bem.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Tenha pessoas que você ama.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Construa vínculos.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Crie memórias.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Mas não entregue completamente a sua capacidade de ficar de pé para outra pessoa.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Porque, por mais que alguém diga "eu nunca vou embora", ninguém consegue garantir o futuro.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              ⚓ Esteja preparado para ficar sozinho, mas não viva esperando ser abandonado.
+            </div>
+          </div>
+
+          <!-- Verdade 2 -->
+          <div class="glass-card dignity-article-card" id="truth-card-2" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Verdade 02</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="2"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Algumas pessoas simplesmente vão deixar de gostar de você</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode ser uma pessoa incrível e ainda assim alguém pode perder o interesse.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode não haver um grande motivo.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Talvez os sentimentos simplesmente tenham mudado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso é difícil porque nosso cérebro procura uma explicação:
+            </p>
+            <blockquote style="font-style: italic; color: var(--text-primary); border-left: 2px solid rgba(255,255,255,0.15); padding-left: 0.75rem; font-size: 0.92rem; margin: 0.5rem 0;">
+              "O que eu fiz?"<br>"O que há de errado comigo?"
+            </blockquote>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes, não existe uma resposta satisfatória.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              A pessoa simplesmente mudou.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E você não consegue obrigar alguém a continuar sentindo aquilo que sentia antes.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso não transforma o que vocês viveram em mentira.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Algo pode ter sido verdadeiro e ainda assim ter terminado.
+            </p>
+          </div>
+
+          <!-- Verdade 3 -->
+          <div class="glass-card dignity-article-card" id="truth-card-3" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">Verdade 03</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="3"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Você não vai ser compreendido por todo mundo</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode explicar suas intenções perfeitamente e ainda ser interpretado de outra maneira.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode fazer o seu melhor e alguém continuar achando que você não fez o suficiente.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode ser gentil e alguém pensar que você é fraco.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode colocar limites e alguém dizer que você mudou.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você não controla completamente a forma como as pessoas enxergam você.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Em algum momento, você precisa aceitar:
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 700; line-height: 1.6;">
+              algumas pessoas vão entender você errado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E você não precisa passar a vida inteira tentando corrigir a imagem que cada pessoa possui de você.
+            </p>
+          </div>
+
+          <!-- Verdade 4 -->
+          <div class="glass-card dignity-article-card" id="truth-card-4" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Verdade 04</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="4"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Nem todo mundo vai reconhecer seu esforço</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes você vai fazer tudo certo e ninguém vai perceber.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Vai estudar e não conseguir a nota que queria.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Vai ajudar alguém e essa pessoa pode nem agradecer.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Vai trabalhar muito e outra pessoa pode receber o reconhecimento.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Vai se esforçar em um relacionamento e talvez a outra pessoa nem perceba o quanto você tentou.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              É frustrante.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Mas se você depender constantemente do reconhecimento dos outros para saber se aquilo que fez teve valor, ficará vulnerável à opinião deles.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              🌟 Faça algumas coisas porque elas são importantes para você, não porque alguém vai bater palmas depois.
+            </div>
+          </div>
+
+          <!-- Verdade 5 -->
+          <div class="glass-card dignity-article-card" id="truth-card-5" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">Verdade 05</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="5"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Você pode fazer tudo certo e ainda assim perder</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Essa talvez seja uma das verdades mais difíceis.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Nem todo fracasso significa que você fez algo errado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes você estudou e não passou.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Tentou salvar uma relação e ela terminou.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Trabalhou duro e outra pessoa conseguiu a oportunidade.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Tomou cuidado e algo deu errado mesmo assim.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              A vida não funciona como uma equação em que esforço garante resultado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              O esforço aumenta suas chances. Não controla o resultado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E aceitar isso não significa desistir de tentar.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              🌱 Significa entender que resultado e valor pessoal não são a mesma coisa.
+            </div>
+          </div>
+
+          <!-- Verdade 6 -->
+          <div class="glass-card dignity-article-card" id="truth-card-6" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Verdade 06</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="6"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Algumas coisas não terão fechamento</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Nem toda história termina com uma conversa bonita.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes alguém desaparece.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você nunca descobre exatamente por quê.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes você pede desculpas e a pessoa não aceita.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes você queria uma explicação e nunca recebe.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Esperar eternamente por uma resposta também pode ser uma forma de ficar preso ao passado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes você precisa seguir em frente sem ter todas as respostas.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 700; line-height: 1.6;">
+              Nem todo final vem acompanhado de uma explicação.
+            </p>
+          </div>
+
+          <!-- Verdade 7 -->
+          <div class="glass-card dignity-article-card" id="truth-card-7" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">Verdade 07</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="7"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Você também vai decepcionar pessoas</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Essa é a verdade que pode ser difícil de aceitar porque costumamos pensar apenas no momento em que somos decepcionados.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Mas você também vai mudar.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Vai cometer erros.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Vai tomar decisões que alguém não vai entender.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Vai dizer "não".
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Vai escolher a si mesmo em algumas situações.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E alguém pode ficar decepcionado com você.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso não significa automaticamente que você fez algo errado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você não consegue construir uma vida em que ninguém jamais se decepcione com você.
+            </p>
+          </div>
+
+          <!-- Verdade 8 -->
+          <div class="glass-card dignity-article-card" id="truth-card-8" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Verdade 08</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="8"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Você não pode salvar todo mundo</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode amar alguém profundamente e ainda assim não conseguir tirá-lo de um problema.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode aconselhar.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode acompanhar.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode oferecer ajuda.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Pode permanecer ao lado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Mas a vida daquela pessoa continua sendo dela.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Existe uma diferença entre estar ao lado de alguém e tentar viver por alguém.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode estender a mão. Não pode obrigar alguém a segurá-la.
+            </p>
+          </div>
+
+          <!-- Verdade 9 -->
+          <div class="glass-card dignity-article-card" id="truth-card-9" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">Verdade 09</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="9"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Algumas oportunidades não voltam</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Nem tudo pode ser recuperado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Algumas pessoas vão embora.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Algumas fases acabam.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Alguns momentos passam.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E algumas oportunidades realmente são perdidas.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso pode parecer cruel, mas também é justamente o que torna determinadas coisas importantes.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Se tudo pudesse ser repetido infinitamente, talvez nada tivesse urgência.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes precisamos aprender a valorizar enquanto temos.
+            </p>
+          </div>
+
+          <!-- Verdade 10 -->
+          <div class="glass-card dignity-article-card" id="truth-card-10" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Verdade 10</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="10"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Você vai se arrepender de algumas escolhas</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Não existe vida sem arrependimentos.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você vai olhar para trás e pensar:
+            </p>
+            <blockquote style="font-style: italic; color: var(--text-primary); border-left: 2px solid rgba(255,255,255,0.15); padding-left: 0.75rem; font-size: 0.92rem; margin: 0.5rem 0;">
+              "Eu deveria ter feito diferente."
+            </blockquote>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              E talvez realmente devesse.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Mas você tomou aquela decisão com a pessoa que era naquele momento, com as informações que possuía e com a maturidade que tinha.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você não pode voltar para ensinar o seu "eu" do passado tudo o que sabe hoje. Pode apenas aprender com ele.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              🎓 O arrependimento pode ser uma professora terrível para se viver junto, mas uma ótima professora para aprender.
+            </div>
+          </div>
+
+          <!-- Verdade 11 -->
+          <div class="glass-card dignity-article-card" id="truth-card-11" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">Verdade 11</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="11"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">O tempo passa mesmo quando você não está pronto</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Algumas fases acabam antes de você estar preparado.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              A escola acaba. As amizades mudam. As pessoas crescem. Os lugares mudam. Você muda.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Às vezes sentimos saudade de uma versão da nossa vida que não existe mais. E não existe uma maneira de voltar exatamente para ela.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Podemos guardar a memória. Podemos visitar lugares. Podemos reencontrar pessoas. Mas o momento em si passou.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 700; line-height: 1.6;">
+              A vida continua acontecendo enquanto você decide se está pronto para continuar.
+            </p>
+          </div>
+
+          <!-- Verdade 12 -->
+          <div class="glass-card dignity-article-card" id="truth-card-12" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-accent); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">Verdade 12</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="12"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">Você não é o centro da vida das outras pessoas</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Isso pode parecer triste, mas também pode ser libertador.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              As pessoas estão preocupadas com os próprios problemas. Pensam em suas próprias inseguranças. Cometem seus próprios erros.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Muitas vezes você passa horas preocupado com algo que disse e a outra pessoa nem se lembra mais.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              🌌 Nem tudo é sobre você. Nem todo silêncio é rejeição. Nem toda mudança de comportamento é culpa sua. E nem todo julgamento merece sua atenção.
+            </div>
+          </div>
+
+          <!-- Verdade 13 -->
+          <div class="glass-card dignity-article-card" id="truth-card-13" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 2rem; border-left: 4px solid var(--color-primary-light); transition: var(--transition-fast);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary-light); letter-spacing: 0.08em;">Verdade 13</span>
+              <label class="check-label-sense" style="cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 0.4rem;">
+                <input type="checkbox" class="cb-truth-item" data-index="13"> <span style="font-size: 0.75rem;">Marcar como Refletida</span>
+              </label>
+            </div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff;">A vida não vai esperar você se sentir preparado</h3>
+            
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode passar anos pensando:
+            </p>
+            <blockquote style="font-style: italic; color: var(--text-primary); border-left: 2px solid rgba(255,255,255,0.15); padding-left: 0.75rem; font-size: 0.92rem; margin: 0.5rem 0;">
+              "Quando eu estiver pronto, eu faço."
+            </blockquote>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Só que talvez esse momento nunca chegue.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+              Você pode continuar com medo. Pode continuar inseguro. Pode continuar sem saber exatamente o que está fazendo. E ainda assim precisar decidir.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-sm); border: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-primary); font-weight: 700; line-height: 1.5;">
+              🦁 Muitas vezes, coragem não é ausência de medo. É decidir mesmo carregando o medo junto.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Ideia Principal / Conclusão (Em Destaque) -->
+      <div class="glass-card" style="margin-top: 2.5rem; padding: 2.5rem; border-top: 4px solid var(--color-accent); display: flex; flex-direction: column; gap: 1.25rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.1em; display: block;">A Verdade Suprema</span>
+        <h3 style="font-family: var(--font-title); font-size: 1.5rem; font-weight: 700; color: #ffffff; line-height: 1.4;">
+          A vida não promete que tudo vai dar certo.
+        </h3>
+        
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin: 0 auto;">
+          Ela não promete que as pessoas ficarão. Não promete que seus planos funcionarão. Não promete que você será reconhecido. Não promete que suas escolhas serão perfeitas. Mas isso não significa que nada vale a pena. Significa que o valor da vida não está em conseguir controlar tudo. Está também em viver apesar da incerteza.
+        </p>
+
+        <p style="font-size: 1.05rem; color: var(--text-primary); font-family: var(--font-title); font-style: italic; line-height: 1.7; font-weight: 600;">
+          "Você pode perder pessoas e ainda amar outras. Pode fracassar e tentar novamente. Pode se arrepender e aprender. Pode ficar sozinho por um período e construir novos vínculos. Pode não saber exatamente para onde está indo e ainda assim dar o próximo passo."
+        </p>
+
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin: 0 auto;">
+          É a vida. Ela não é justa o tempo todo, não é previsível e não está sob nosso controle. Algumas coisas vão doer de qualquer jeito. O que podemos escolher é o que fazemos depois que elas acontecem.
+        </p>
       </div>
     </section>
 

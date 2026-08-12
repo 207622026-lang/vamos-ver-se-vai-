@@ -166,24 +166,31 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 1.25rem;
-  flex-wrap: wrap;
+  gap: 0.45rem;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  padding: 0.45rem 0.85rem;
+  padding: 0.35rem 0.65rem;
   border-radius: var(--radius-sm);
   transition: var(--transition-fast);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover {
   color: var(--text-primary);
   background: rgba(255, 255, 255, 0.03);
   box-shadow: inset 0 0 0 1px var(--border-color);
+}
+
+.nav-link.active {
+  color: var(--color-primary-light);
+  background: rgba(126, 163, 131, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(126, 163, 131, 0.25);
+  text-shadow: 0 0 8px rgba(157, 188, 161, 0.2);
 }
 
 /* Layout container */
@@ -1010,6 +1017,10 @@ main {
   flex-direction: column;
   gap: 1.25rem;
   border-left: 4px solid var(--color-accent);
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  z-index: 10;
 }
 
 .simulator-hud {
@@ -1068,7 +1079,7 @@ main {
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  height: 240px;
+  height: 360px;
   overflow-y: auto;
   padding: 1.25rem;
   display: flex;
@@ -1143,6 +1154,12 @@ main {
   background: rgba(191, 97, 106, 0.06);
   border: 1px solid rgba(191, 97, 106, 0.2);
   color: var(--color-danger);
+}
+
+.simulator-feedback.warning-feedback {
+  background: rgba(235, 203, 139, 0.06);
+  border: 1px solid rgba(235, 203, 139, 0.2);
+  color: var(--color-warning);
 }
 
 .dignity-tips-grid {
@@ -1582,10 +1599,28 @@ footer {
   animation: fadeIn 0.35s ease-out forwards;
 }
 
+@media (max-width: 1150px) and (min-width: 601px) {
+  .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: calc(100vw - 200px);
+    padding: 0.2rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 968px) {
   .pillar-tools-grid, .motivation-grid, .provocation-layout, .diary-grid {
     grid-template-columns: 1fr;
+  }
+  .simulator-chat-card {
+    position: static;
   }
 }
 
