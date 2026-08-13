@@ -34,6 +34,7 @@
       <a href="#complications-section" class="nav-link" id="nav-complications-btn">Pessoas Complicadas</a>
       <a href="#hard-truths-section" class="nav-link" id="nav-hard-truths-btn">Verdades Duras</a>
       <a href="#auto-analysis-section" class="nav-link" id="nav-auto-analysis-btn">Auto-análise</a>
+      <a href="#love-section" class="nav-link" id="nav-love-btn">Mútua Responsabilidade</a>
       <a href="#philosophy-section" class="nav-link" id="nav-philosophy-btn">Filosofia de Vida</a>
       <a href="#diary-section" class="nav-link" id="nav-diary-btn">Diário</a>
       <a href="#credits-section" class="nav-link" id="nav-credits-btn">Créditos</a>
@@ -740,9 +741,12 @@
             </label>
           </div>
 
-          <button class="btn btn-primary" id="btn-save-auto-analysis" style="width: 100%; background: var(--color-accent); color: var(--bg-dark); box-shadow: 0 4px 15px var(--color-accent-glow);">
-            Registrar Auto-análise no Diário
-          </button>
+          <div style="display: flex; gap: 0.5rem; width: 100%;">
+            <button class="btn btn-primary" id="btn-save-auto-analysis" style="flex: 1; background: var(--color-accent); color: var(--bg-dark); box-shadow: 0 4px 15px var(--color-accent-glow); border: none;">
+              Registrar Auto-análise no Diário
+            </button>
+            <button class="btn btn-secondary-outline" id="btn-reset-auto-analysis" style="width: 90px; border: 1px solid var(--border-color); background: transparent; color: var(--text-secondary); cursor: pointer;">Reiniciar</button>
+          </div>
         </div>
 
         <!-- Mural da Auto-análise (Lado Direito) -->
@@ -970,6 +974,320 @@
         <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin: 0 auto;">
           Reconhecer isso não te torna menor. É justamente o que permite que você se torne alguém melhor do que era ontem.
         </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: MÚTUA RESPONSABILIDADE & RELACIONAMENTOS (NEW) -->
+    <section class="section-block" id="love-section">
+      <div class="section-header">
+        <span class="section-tag">Conexões Saudáveis</span>
+        <h2 class="section-title">Mútua Responsabilidade & Parceria</h2>
+        <p class="section-subtitle">Um relacionamento não se sustenta apenas sobre a paixão dos dias bons, mas sobre a maturidade e a parceria nos dias difíceis. (A complexidade e simplicidade do amor)</p>
+      </div>
+
+      <div class="provocation-layout">
+        
+        <!-- Painel Interativo de Diálogos (Lado Esquerdo) -->
+        <div class="glass-card simulator-chat-card" style="border-top: 4px solid var(--color-primary-light);">
+          <div class="simulator-hud">
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary-light); font-family: var(--font-title);">Treino de Conversas Difíceis</span>
+            <div class="toxicity-gauge">
+              <span class="gauge-label">Status da Parceria:</span>
+              <div class="gauge-bar-bg">
+                <div class="gauge-bar-fill" id="love-partnership-gauge" style="width: 50%; background: var(--color-warning);"></div>
+              </div>
+              <span class="gauge-pct" id="love-pct-val">Razoável</span>
+            </div>
+          </div>
+
+          <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-top: 0.25rem;">
+            <strong>Cenário: A Esfriação / A Sobrecarga Emocional na Relação</strong><br>
+            O outro parceiro se recusa a conversar, ignora suas tentativas de alinhar a relação ou diz frases como a destacada abaixo.
+          </div>
+
+          <!-- Chat Simulator Screen -->
+          <div class="simulator-chat-box" id="love-chat-container">
+            <div class="chat-bubble rival-bubble">
+              <span class="bubble-sender">Parceiro(a)</span>
+              <p class="bubble-text">"Você é muito dramático(a), tá tudo bem, para de procurar problema onde não tem."</p>
+            </div>
+          </div>
+
+          <!-- Options -->
+          <div class="simulator-options" id="love-options-container" style="display: flex; flex-direction: column; gap: 0.65rem;">
+            <button class="option-btn" data-option="passiva" style="text-align: left; padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: rgba(255,255,255,0.015); color: var(--text-primary); cursor: pointer; transition: all 0.2s ease;">
+              <strong>Reação Passiva / Aceitação da Solidão:</strong> "É verdade, devo estar exagerando mesmo... desculpa por tocar no assunto."
+            </button>
+            <button class="option-btn" data-option="agressiva" style="text-align: left; padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: rgba(255,255,255,0.015); color: var(--text-primary); cursor: pointer; transition: all 0.2s ease;">
+              <strong>Reação Agressiva / Defensiva:</strong> "Você nunca se importa comigo! Eu faço tudo nessa casa/relação e você não faz nada!"
+            </button>
+            <button class="option-btn" data-option="assertiva" style="text-align: left; padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: rgba(255,255,255,0.015); color: var(--text-primary); cursor: pointer; transition: all 0.2s ease;">
+              <strong>Conversa Difícil (Posicionamento Claro):</strong> "Relacionamento é uma via de mão dupla. Eu preciso conversar sobre isso porque me importo conosco, e fingir que tá tudo bem quando estou me sentindo sozinho só vai destruir o que a gente construiu."
+            </button>
+          </div>
+
+          <!-- Feedback Analysis (hidden initially) -->
+          <div class="simulator-feedback" id="love-feedback-box" style="display:none; background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-primary); font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary);">
+            <!-- Populated via JS -->
+          </div>
+
+          <div id="love-actions-container" style="display: none; gap: 0.5rem; width: 100%;">
+            <button class="btn btn-secondary" id="btn-save-love-diary" style="flex: 1; border: none;">
+              Registrar Resolução no Diário
+            </button>
+            <button class="btn btn-secondary-outline" id="btn-reset-love" style="width: 90px; border: 1px solid var(--border-color); background: transparent; color: var(--text-secondary); cursor: pointer;">Reiniciar</button>
+          </div>
+        </div>
+
+        <!-- Mural da Reflexão (Lado Direito) -->
+        <div class="dignity-guide-column" style="display:flex; flex-direction:column; gap:1.5rem;">
+          
+          <!-- Card de Introdução Geral -->
+          <div class="glass-card dignity-article-card" style="display: flex; flex-direction: column; gap: 1rem; padding: 2rem; border-left: 4px solid var(--color-primary-light);">
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 700; color: #ffffff; margin: 0;">Mural de Aprendizado & Autonomia</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin: 0;">
+              O amor-próprio, a reciprocidade e o amor não correspondido estão intimamente ligados. Clique nos tópicos abaixo para explorar a reflexão completa.
+            </p>
+          </div>
+
+          <!-- Accordion Container (Reusando classes do philosophy-item para design idêntico) -->
+          <div class="philosophy-accordion-container" id="love-accordion" style="display:flex; flex-direction:column; gap:1rem; width:100%;">
+            
+            <!-- Tópico 1 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">🤝</span>
+                1. O Princípio da Mão Dupla: O Esforço Precisa Ser Recíproco
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>
+                  Um relacionamento não é uma disputa onde cada um tenta ganhar, nem um monólogo onde apenas um se esforça para manter a ponte de pé. É um pacto de cooperação constante.
+                </p>
+                <p>
+                  <strong>A Ilusão do 50/50:</strong> Na vida real, a divisão nem sempre será exatamente 50% para cada lado todos os dias. Haverá dias em que seu parceiro estará a 20% (por cansaço, estresse ou dor) e você precisará dar 80%. O problema surge quando essa assimetria vira regra: quando um lado entrega 90% continuamente e o outro apenas assiste ou cobra.
+                </p>
+                <p>
+                  <strong>A "Solidão a Dois":</strong> Estar sozinho quando se está solteiro é natural. Mas sentir-se sozinho estando ao lado de alguém é uma das dores mais desgastantes que existem. Ela acontece quando há presença física, mas ausência emocional, falta de escuta e desinteresse pelo mundo do outro. Ninguém merece ser apenas um espectador na vida de quem escolheu para caminhar junto.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tópico 2 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">🌱</span>
+                2. O Verdadeiro Sentido de Estar Junto
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>
+                  Ter uma parceria é algo incrível, mas o romantismo das redes sociais criou uma expectativa irreal de que "se há amor, não há conflito". A realidade psicológica é o oposto:
+                </p>
+                <p>
+                  <strong>Amor é Escolha Diária:</strong> A paixão inicial é um processo biológico involuntário; o amor duradouro é uma decisão diária de continuar construindo, mesmo quando o outro irrita, erra ou quando a rotina pesa.
+                </p>
+                <p>
+                  <strong>Proteger a Relação, Não o Ego:</strong> O verdadeiro sentido de um relacionamento saudável não é nunca ter problemas, mas ter a certeza de que, quando os problemas surgirem, vocês estarão do mesmo lado da mesa olhando contra o problema — e não um contra o outro.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tópico 3 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">💬</span>
+                3. Conversas Difíceis Criam Relações Saudáveis
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>
+                  Muitas pessoas evitam confrontos achando que estão "salvando" a relação, quando na verdade estão apenas acumulando ressentimento em silêncio até a estrutura ruir.
+                </p>
+                <blockquote style="font-style: italic; color: var(--text-primary); border-left: 3px solid var(--color-primary-light); padding-left: 0.75rem; font-size: 0.98rem; margin: 0.5rem 0; font-weight: 700;">
+                  "O silêncio que evita uma briga hoje é o mesmo que destrói o respeito amanhã."
+                </blockquote>
+                <p>
+                  <strong>O Filtro do Futuro:</strong> O primeiro passo para construir um futuro de verdade com alguém é a coragem de ter conversas desconfortáveis: alinhar expectativas, falar sobre limites, expor feridas, admitir erros e alinhar planos.
+                </p>
+                <p>
+                  <strong>Conflito Construtivo vs. Destrutivo:</strong> Casais duradouros não são os que nunca discutem, mas os que aprenderam a discutir sem se desrespeitar. Eles usam o conflito não para "vencer uma discussão", mas para entender o ponto de vista do outro e ajustar a rota.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tópico 4 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">⏳</span>
+                4. E quando a pessoa não consegue estar presente como antes?
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Nem sempre a distância significa falta de amor.</p>
+                <p>Às vezes a pessoa está cansada, trabalhando demais, passando por problemas ou simplesmente vivendo uma fase em que não consegue oferecer a mesma atenção de antes. E isso não faz o sentimento desaparecer.</p>
+                <p>Você ainda pode gostar do jeito dela, das conversas, das risadas, dos momentos juntos e de simplesmente ter aquela pessoa por perto.</p>
+                <p><strong>Mas existe uma coisa importante: entender o motivo da distância não faz com que ela deixe de doer.</strong></p>
+                <p>Você pode entender que alguém está cansado e, ao mesmo tempo, sentir falta. Pode saber que a pessoa está ocupada e ainda ficar triste quando manda uma mensagem e ela não responde. Pode amar alguém e ainda pensar: <em>"Eu queria que ela demonstrasse mais que também quer estar aqui."</em></p>
+                <p>Isso não significa necessariamente que você esteja apaixonado apenas pelo que recebe. Às vezes significa simplesmente que você precisa de uma forma de carinho e presença que a outra pessoa, naquele momento, não está conseguindo oferecer.</p>
+                <p><strong>E aí aparece uma pergunta mais difícil: "Eu consigo continuar nessa relação recebendo tão pouco do que preciso?"</strong></p>
+                <p>Essa pergunta é diferente de: <em>"Ela me ama?"</em>. Porque alguém pode gostar muito de você e, ainda assim, não conseguir oferecer a relação que você precisa.</p>
+                <p>E você também pode amar alguém e perceber que está ficando cansado de sempre ser quem procura, quem manda mensagem, quem tenta conversar, quem demonstra carinho e quem espera uma resposta.</p>
+                <p><strong>Amor não elimina necessidades.</strong> Você pode compreender o outro sem abandonar aquilo que você também precisa.</p>
+                <p>E talvez essa seja uma das partes mais difíceis de um relacionamento: às vezes, duas pessoas podem se gostar de verdade e ainda assim não estarem conseguindo se encontrar no meio do caminho.</p>
+                <p><em>Isso deixa a reflexão muito mais próxima da realidade, porque não transforma a pessoa distante automaticamente em alguém que não ama, nem transforma quem está sentindo falta em alguém "dependente". Às vezes simplesmente existe amor + circunstâncias ruins + necessidades diferentes + falta de reciprocidade naquele momento.</em></p>
+                <p><strong>Quando a distância começa a machucar:</strong> Você pode entender que alguém está cansado, ocupado ou passando por uma fase difícil e, mesmo assim, sentir falta dela. Compreender a distância não faz com que ela deixe de doer. Quando você percebe que está sempre procurando, mandando mensagens, demonstrando carinho e tentando manter a proximidade, enquanto o outro parece cada vez mais distante, é normal começar a questionar a reciprocidade.</p>
+                <p>A solução não é cobrar cada mensagem ou fazer joguinhos. É conversar: <em>"Eu sei que você tem suas responsabilidades, mas ultimamente estou sentindo falta da nossa proximidade e parece que estou tentando manter isso sozinho."</em> Depois, observe. Talvez seja apenas uma fase. Talvez vocês precisem encontrar outra forma de estar juntos. Mas, se somente um lado continuar tentando, é importante se perguntar: <em>"Essa relação, do jeito que está, ainda está sendo boa para nós dois?"</em> Você pode entender alguém sem ignorar aquilo que você também precisa.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 5 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">💔</span>
+                5. Amor não correspondido e aprender a gostar da própria companhia
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Gostar de alguém que não sente o mesmo por você é uma das experiências mais difíceis de aceitar.</p>
+                <p>Você pode conhecer a pessoa, gostar do jeito dela, imaginar momentos juntos e até acreditar que vocês combinariam perfeitamente. Mas existe uma parte da realidade que não podemos controlar: <strong>você não consegue fazer alguém gostar de você.</strong></p>
+                <p>Não importa o quanto você seja carinhoso, interessante, bonito, engraçado ou presente. O sentimento do outro não é uma recompensa pelo que você oferece. E isso pode doer muito.</p>
+                <p><strong>Quando a pessoa não sente o mesmo:</strong> A primeira reação muitas vezes é tentar encontrar uma maneira de mudar a situação. <em>"Talvez se eu me aproximar mais..."</em>, <em>"Talvez se eu demonstrar mais..."</em>, <em>"Talvez se ela me conhecer melhor..."</em>. Mas existe um limite entre demonstrar o que sente e tentar convencer alguém a sentir o mesmo.</p>
+                <p>Você pode dizer que gosta. Pode ser sincero. Pode dar uma oportunidade para a pessoa te conhecer. Mas depois disso, a escolha também pertence a ela. E quando a resposta é não, por mais doloroso que seja, precisamos respeitar esse não. Não porque o seu sentimento não importa, mas porque o sentimento dela também importa.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 6 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">💭</span>
+                6. O problema de transformar alguém em uma possibilidade
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Às vezes não nos apaixonamos apenas pela pessoa. Nos apaixonamos pela possibilidade de vocês dois.</p>
+                <p>Imaginamos como seria. Criamos conversas que nunca aconteceram. Momentos que nunca vivemos. Uma versão da pessoa que talvez nem exista. E quanto mais alimentamos essa imaginação, mais difícil fica aceitar a realidade.</p>
+                <p>Por isso, é importante separar: <strong>quem essa pessoa realmente é</strong> de <strong>quem você imaginou que ela poderia ser com você.</strong></p>
+                <p>Às vezes você não está sofrendo apenas pela pessoa. Está sofrendo pela vida que imaginou que teria com ela.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 7 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">⏳</span>
+                7. E quando você não consegue esquecer?
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Você não precisa esquecer imediatamente. Não existe um botão para desligar sentimentos.</p>
+                <p>Você pode continuar gostando de alguém mesmo sabendo que não existe futuro entre vocês. O que precisa mudar não é necessariamente o sentimento. É o que você faz com ele.</p>
+                <p>Você pode sentir saudade sem procurar. Pode gostar sem insistir. Pode lembrar sem voltar. Pode desejar que tivesse sido diferente e ainda assim aceitar que não foi.</p>
+                <p>Com o tempo, aquilo que hoje ocupa quase toda a sua cabeça pode começar a ocupar apenas uma parte dela.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 8 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">🧘</span>
+                8. Amor-próprio não é achar que você é incrível o tempo inteiro
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Existe uma versão superficial de amor-próprio que diz: <em>"Eu sou perfeito."</em>, <em>"Eu sou melhor que todo mundo."</em>, <em>"Eu não preciso de ninguém."</em>. Isso não é necessariamente amor-próprio.</p>
+                <p>Amor-próprio também é conseguir olhar para si e pensar: <strong>"Eu tenho defeitos, tenho coisas para melhorar, às vezes faço escolhas ruins, mas ainda assim não preciso me odiar por ser humano."</strong></p>
+                <p>Você não precisa se considerar extraordinário para reconhecer que possui valor.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 9 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">🚶</span>
+                9. Amar a si mesmo também é saber ficar sozinho
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Talvez essa seja uma das partes mais difíceis. Conseguir ficar sozinho sem sentir que está abandonado.</p>
+                <p>Sair sozinho. Comer sozinho. Assistir alguma coisa sozinho. Passar um domingo sem ninguém para conversar. Ter um dia ruim sem precisar imediatamente procurar alguém para preencher aquele vazio. No começo pode parecer estranho, principalmente quando estamos acostumados a buscar constantemente a atenção de alguém.</p>
+                <p>Mas existe uma diferença entre solidão e saber estar sozinho. Solidão é sentir falta de conexão. Saber estar sozinho é descobrir que a sua própria companhia também pode ser uma forma de conforto.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 10 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">🎧</span>
+                10. Aprenda a gostar da sua própria companhia
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Faça coisas que você faria com outra pessoa.</p>
+                <p>Assista ao filme que queria assistir. Saia para algum lugar. Escute música. Jogue. Caminhe. Leia. Estude algo que realmente desperte sua curiosidade. Fique em silêncio. Não porque você precisa se distrair da solidão, mas porque precisa descobrir que estar sozinho não significa estar vazio.</p>
+                <p>Você não precisa esperar alguém chegar para começar a viver.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 11 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">🔗</span>
+                11. Não transforme outra pessoa na condição para você ser feliz
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>É maravilhoso ter alguém para compartilhar a vida. Ter alguém para mandar mensagem. Alguém para abraçar. Alguém para contar como foi seu dia.</p>
+                <p>Mas existe uma diferença entre: <strong>"Eu quero alguém para compartilhar minha vida."</strong> e <strong>"Minha vida só vale a pena se eu tiver alguém."</strong></p>
+                <p>Na primeira situação, você compartilha. Na segunda, você depende. E quando a pessoa vai embora, parece que levou uma parte inteira da sua identidade junto.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 12 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">❓</span>
+                12. E se ninguém me escolher?
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Essa talvez seja uma das perguntas mais dolorosas. Mas o fato de alguém não escolher você não significa que você não seja digno de ser escolhido.</p>
+                <p>Uma pessoa pode não gostar de você. Outra pode gostar. Outra pode gostar e não querer um relacionamento. Outra pode querer algo completamente diferente. O amor não funciona como uma avaliação onde você recebe uma nota e descobre quanto vale.</p>
+                <p><strong>Rejeição não é uma medida do seu valor.</strong> É apenas a incompatibilidade entre duas pessoas e dois sentimentos.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 13 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">👣</span>
+                13. Você não precisa deixar de amar para seguir em frente
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Às vezes pensamos: <em>"Só vou conseguir seguir em frente quando parar de gostar."</em>. Talvez seja o contrário. Você começa a seguir em frente quando aceita: <strong>"Eu ainda gosto dessa pessoa, mas não vou construir minha vida esperando que ela mude de ideia."</strong> Isso é muito diferente. Você não está negando o sentimento, está escolhendo não ser controlado por ele.</p>
+              </div>
+            </div>
+
+            <!-- Tópico 14 -->
+            <div class="philosophy-item glass-card">
+              <button class="philosophy-trigger">
+                <span class="ph-trigger-icon">🛡️</span>
+                14. A verdadeira questão do amor-próprio
+                <span class="ph-trigger-arrow">▼</span>
+              </button>
+              <div class="philosophy-content">
+                <p>Talvez amor-próprio não seja olhar no espelho e gostar de tudo em você. Talvez seja conseguir olhar para si nos dias em que você se sente rejeitado, sozinho, insecure ou insuficiente e ainda pensar: <strong>"Eu continuo aqui."</strong></p>
+                <p>Você não precisa estar apaixonado por si mesmo todos os dias. Mas precisa aprender a não abandonar a si mesmo quando outra pessoa decide não ficar.</p>
+                <p>Porque, no final, existe uma pessoa cuja companhia você terá durante toda a sua vida: <strong>você.</strong> E talvez uma das relações mais importantes que você pode construir seja justamente essa.</p>
+                <p>Aprenda a gostar de estar consigo mesmo. Não para não precisar de ninguém, mas para que, quando alguém chegar, você possa escolher estar com essa pessoa — e não precisar dela para conseguir suportar a própria vida.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 
@@ -1562,7 +1880,10 @@
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
               Meditar em Verdade Aleatória
             </button>
-            <button class="btn btn-secondary btn-sm" id="btn-save-truths-diary" style="width: 100%;">Registrar Meditações no Diário</button>
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn btn-secondary btn-sm" id="btn-save-truths-diary" style="flex: 1;">Registrar Meditações</button>
+              <button class="btn btn-secondary-outline btn-sm" id="btn-reset-truths" style="width: 90px; border: 1px solid var(--border-color); background: transparent; color: var(--text-secondary); cursor: pointer;">Reiniciar</button>
+            </div>
           </div>
         </div>
 

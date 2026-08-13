@@ -1283,7 +1283,7 @@ main {
 }
 
 .philosophy-item.active .philosophy-content {
-  max-height: 900px;
+  max-height: 2500px;
   padding: 1.25rem 2rem 2rem 2rem;
   border-top: 1px solid var(--border-color);
 }

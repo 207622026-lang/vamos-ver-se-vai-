@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initComplicationsSection();
   initHardTruthsSection();
   initAutoAnalysisSection();
+  initLoveSection();
+  initLoveAccordion();
   initDiaryLogs();
 });
 
@@ -1105,6 +1107,7 @@ function initComplicationsSection() {
   const dryBtn = document.getElementById('btn-dry-retreat');
   const dryFeedbackEl = document.getElementById('dry-retreat-feedback');
   const dryChatContainer = document.getElementById('dry-chat-container');
+  const initialDryChatHTML = dryChatContainer ? dryChatContainer.innerHTML : '';
 
   // Reciprocity Assessment
   if (assessBtn && feedbackEl) {
@@ -1146,7 +1149,10 @@ function initComplicationsSection() {
       feedbackEl.className = `simulator-feedback ${feedbackClass}`;
       feedbackEl.innerHTML = `
         <p><strong>${title}:</strong> ${desc}</p>
-        <button class="btn btn-secondary btn-sm" id="btn-save-reciprocity-log" style="margin-top:0.75rem; width:100%;">Registrar Diagnóstico no Diário</button>
+        <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+          <button class="btn btn-secondary btn-sm" id="btn-save-reciprocity-log" style="flex:1;">Registrar no Diário</button>
+          <button class="btn btn-secondary-outline btn-sm" id="btn-reset-reciprocity" style="flex:1; border:1px solid var(--border-color); background:transparent; color:var(--text-secondary); cursor:pointer;">Reiniciar</button>
+        </div>
       `;
 
       document.getElementById('btn-save-reciprocity-log')?.addEventListener('click', (e) => {
@@ -1158,6 +1164,13 @@ function initComplicationsSection() {
         registerResilienceAction(textLog);
         showToast("Diagnóstico registrado no Diário!");
         document.getElementById('nav-diary-btn').click();
+      });
+
+      document.getElementById('btn-reset-reciprocity')?.addEventListener('click', () => {
+        cbInterest.checked = false;
+        cbEffort.checked = false;
+        cbCare.checked = false;
+        feedbackEl.style.display = 'none';
       });
     });
   }
@@ -1184,7 +1197,10 @@ function initComplicationsSection() {
         dryFeedbackEl.style.display = 'block';
         dryFeedbackEl.innerHTML = `
           <p>✨ <b>Recuo Efetuado:</b> Você optou por não insistir nem implorar por atenção de quem responde seco. Se você parar de puxar, a relação continuará existindo? Deixe essa pergunta ser respondida pela atitude do outro, sem que isso mude o seu valor próprio.</p>
-          <button class="btn btn-primary btn-sm" id="btn-save-dry-retreat" style="margin-top:0.75rem; width:100%;">Registrar Autonomia no Diário</button>
+          <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+            <button class="btn btn-primary btn-sm" id="btn-save-dry-retreat" style="flex:1;">Registrar no Diário</button>
+            <button class="btn btn-secondary-outline btn-sm" id="btn-reset-dry" style="flex:1; border:1px solid var(--border-color); background:transparent; color:var(--text-secondary); cursor:pointer;">Reiniciar</button>
+          </div>
         `;
         playTone(660, 'sine', 0.2);
 
@@ -1194,6 +1210,13 @@ function initComplicationsSection() {
           registerResilienceAction("Simulei recuo em diálogo seco e decidi preservar minha autonomia e espaço");
           showToast("Reflexão registrada no Diário!");
           document.getElementById('nav-diary-btn').click();
+        });
+
+        document.getElementById('btn-reset-dry')?.addEventListener('click', () => {
+          dryChatContainer.innerHTML = initialDryChatHTML;
+          dryFeedbackEl.style.display = 'none';
+          dryBtn.disabled = false;
+          dryBtn.textContent = 'Simular Recuo (Dar Espaço)';
         });
       }, 1000);
     });
@@ -1344,11 +1367,19 @@ function initHardTruthsSection() {
     });
   }
 
+  const resetBtn = document.getElementById('btn-reset-truths');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      resetTruths();
+      playTone(300, 'sine', 0.1);
+    });
+  }
+
   function resetTruths() {
     cbItems.forEach(cb => { cb.checked = false; cb.disabled = false; });
     if (saveBtn) {
       saveBtn.disabled = false;
-      saveBtn.textContent = 'Registrar Meditações no Diário';
+      saveBtn.textContent = 'Registrar Meditações';
     }
     updateProgress();
   }
@@ -1425,4 +1456,187 @@ function initAutoAnalysisSection() {
       }, 1200);
     });
   }
+
+  const resetBtn = document.getElementById('btn-reset-auto-analysis');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      relatoInput.value = '';
+      egoSlider.value = 50;
+      egoVal.textContent = '50%';
+      egoFeedback.textContent = 'Equilíbrio: Seu ego tenta se justificar, mas há espaço para autocrítica sincera e reconhecimento de deslizes.';
+      cbSteps.forEach(cb => cb.checked = false);
+      playTone(300, 'sine', 0.1);
+    });
+  }
+}
+
+function initLoveSection() {
+  const chatContainer = document.getElementById('love-chat-container');
+  const optionsContainer = document.getElementById('love-options-container');
+  const feedbackBox = document.getElementById('love-feedback-box');
+  const gaugeFill = document.getElementById('love-partnership-gauge');
+  const gaugePct = document.getElementById('love-pct-val');
+  const saveBtn = document.getElementById('btn-save-love-diary');
+
+  if (!optionsContainer) return;
+
+  const optionBtns = optionsContainer.querySelectorAll('.option-btn');
+  let selectedOptionText = '';
+  let selectedOptionType = '';
+
+  optionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.getAttribute('data-option');
+      selectedOptionType = type;
+      selectedOptionText = btn.innerHTML.replace(/<\/?strong>/g, '').replace(/[\r\n]+/g, ' ').trim();
+
+      // Highlight selection and disable others
+      optionBtns.forEach(b => {
+        b.style.opacity = '0.5';
+        b.style.pointerEvents = 'none';
+        b.style.border = '1px solid var(--border-color)';
+      });
+      btn.style.opacity = '1';
+      btn.style.border = '2px solid var(--color-primary-light)';
+
+      // Append user bubble to chat
+      const userBubble = document.createElement('div');
+      userBubble.className = 'chat-bubble user-bubble';
+      userBubble.innerHTML = `<span class="bubble-sender">Você</span><p class="bubble-text">${selectedOptionText}</p>`;
+      
+      // Clean previous user bubbles
+      const existingUserBubble = chatContainer.querySelector('.user-bubble');
+      if (existingUserBubble) existingUserBubble.remove();
+      chatContainer.appendChild(userBubble);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      // Update feedback and gauge
+      feedbackBox.style.display = 'block';
+      let feedbackText = '';
+      let gaugeWidth = '';
+      let gaugeLabel = '';
+      let color = '';
+
+      if (type === 'passiva') {
+        feedbackText = '<strong>Análise Psicopedagógica:</strong> Você evitou o confronto por medo de perder a pessoa, aceitando uma "solidão a dois" silenciosa. Isso protege o status quo temporariamente, mas acumula ressentimento e corrói a conexão e o respeito mútuo a longo prazo.';
+        gaugeWidth = '25%';
+        gaugeLabel = 'Solidão a Dois';
+        color = '#bf616a';
+        playTone(220, 'sawtooth', 0.2);
+      } else if (type === 'agressiva') {
+        feedbackText = '<strong>Análise Psicopedagógica:</strong> Você atacou com acusações gerais ("você nunca se importa né", "eu faço tudo"). Isso desvia o foco do problema real, aciona as defesas do parceiro e transforma a conversa em uma guerra de egos. Não há cooperação aqui.';
+        gaugeWidth = '10%';
+        gaugeLabel = 'Conflito / Hostil';
+        color = '#bf616a';
+        playTone(220, 'sawtooth', 0.2);
+      } else if (type === 'assertiva') {
+        feedbackText = '<strong>Análise Psicopedagógica:</strong> Excelente. Você estabeleceu um posicionamento firme e afetuoso, mostrando que relacionamento é uma via de mão dupla e que conversar sobre o desconforto é uma atitude de proteção da própria parceria. Isso constrói o alinhamento necessário nos dias difíceis.';
+        gaugeWidth = '100%';
+        gaugeLabel = 'Parceria Saudável';
+        color = 'var(--color-primary-light)';
+        playTone(660, 'sine', 0.25);
+        fireConfetti();
+      }
+
+      if (gaugeFill) {
+        gaugeFill.style.width = gaugeWidth;
+        gaugeFill.style.background = color;
+      }
+      if (gaugePct) {
+        gaugePct.textContent = gaugeLabel;
+        gaugePct.style.color = color;
+      }
+      if (feedbackBox) {
+        feedbackBox.innerHTML = feedbackText;
+        feedbackBox.style.borderLeft = `3px solid ${color}`;
+      }
+      
+      const actionsContainer = document.getElementById('love-actions-container');
+      if (actionsContainer) actionsContainer.style.display = 'flex';
+    });
+  });
+
+  const resetBtn = document.getElementById('btn-reset-love');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      // Reset
+      optionBtns.forEach(b => {
+        b.style.opacity = '1';
+        b.style.pointerEvents = 'auto';
+        b.style.border = '1px solid var(--border-color)';
+      });
+      const userBubble = chatContainer.querySelector('.user-bubble');
+      if (userBubble) userBubble.remove();
+      feedbackBox.style.display = 'none';
+      const actionsContainer = document.getElementById('love-actions-container');
+      if (actionsContainer) actionsContainer.style.display = 'none';
+      if (gaugeFill) {
+        gaugeFill.style.width = '50%';
+        gaugeFill.style.background = 'var(--color-warning)';
+      }
+      if (gaugePct) {
+        gaugePct.textContent = 'Razoável';
+        gaugePct.style.color = 'var(--text-secondary)';
+      }
+      playTone(300, 'sine', 0.1);
+    });
+  }
+
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      saveBtn.disabled = true;
+      saveBtn.textContent = 'Gravado!';
+
+      const logText = `Diálogo Difícil na Relação: Enfrentei o cenário de sobrecarga com postura ${selectedOptionType.toUpperCase()} (${gaugePct.textContent}).`;
+      registerResilienceAction(logText);
+
+      showToast("Resolução registrada no Diário!");
+      playTone(660, 'sine', 0.25);
+
+      setTimeout(() => {
+        // Reset
+        optionBtns.forEach(b => {
+          b.style.opacity = '1';
+          b.style.pointerEvents = 'auto';
+          b.style.border = '1px solid var(--border-color)';
+        });
+        const userBubble = chatContainer.querySelector('.user-bubble');
+        if (userBubble) userBubble.remove();
+        feedbackBox.style.display = 'none';
+        const actionsContainer = document.getElementById('love-actions-container');
+        if (actionsContainer) actionsContainer.style.display = 'none';
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Registrar Resolução no Diário';
+        if (gaugeFill) {
+          gaugeFill.style.width = '50%';
+          gaugeFill.style.background = 'var(--color-warning)';
+        }
+        if (gaugePct) {
+          gaugePct.textContent = 'Razoável';
+          gaugePct.style.color = 'var(--text-secondary)';
+        }
+
+        document.getElementById('nav-diary-btn').click();
+      }, 1200);
+    });
+  }
+}
+
+function initLoveAccordion() {
+  const items = document.querySelectorAll('#love-accordion .philosophy-item');
+  items.forEach(item => {
+    const trigger = item.querySelector('.philosophy-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all other active items inside the love accordion
+      items.forEach(i => i.classList.remove('active'));
+
+      if (!isActive) {
+        item.classList.add('active');
+        playTone(550, 'sine', 0.08);
+      }
+    });
+  });
 }
