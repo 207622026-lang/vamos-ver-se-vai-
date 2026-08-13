@@ -1357,7 +1357,7 @@ function initHardTruthsSection() {
       playTone(660, 'sine', 0.25);
       
       if (checkedCount === cbItems.length) {
-        fireConfetti();
+        triggerConfetti();
       }
 
       setTimeout(() => {
@@ -1440,7 +1440,7 @@ function initAutoAnalysisSection() {
       playTone(660, 'sine', 0.25);
       
       if (ego <= 25 && checkedCount === 3) {
-        fireConfetti();
+        triggerConfetti();
       }
 
       setTimeout(() => {
@@ -1535,7 +1535,7 @@ function initLoveSection() {
         gaugeLabel = 'Parceria Saudável';
         color = 'var(--color-primary-light)';
         playTone(660, 'sine', 0.25);
-        fireConfetti();
+        triggerConfetti();
       }
 
       if (gaugeFill) {
