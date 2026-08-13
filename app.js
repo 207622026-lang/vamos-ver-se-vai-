@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initAutoAnalysisSection();
   initLoveSection();
   initLoveAccordion();
+  initDignityAccordion();
+  initAutoAnalysisAccordion();
   initDiaryLogs();
 });
 
@@ -1633,6 +1635,38 @@ function initLoveAccordion() {
       // Close all other active items inside the love accordion
       items.forEach(i => i.classList.remove('active'));
 
+      if (!isActive) {
+        item.classList.add('active');
+        playTone(550, 'sine', 0.08);
+      }
+    });
+  });
+}
+
+function initDignityAccordion() {
+  const items = document.querySelectorAll('#dignity-accordion .philosophy-item');
+  items.forEach(item => {
+    const trigger = item.querySelector('.philosophy-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      items.forEach(i => i.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+        playTone(550, 'sine', 0.08);
+      }
+    });
+  });
+}
+
+function initAutoAnalysisAccordion() {
+  const items = document.querySelectorAll('#auto-analysis-accordion .philosophy-item');
+  items.forEach(item => {
+    const trigger = item.querySelector('.philosophy-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      items.forEach(i => i.classList.remove('active'));
       if (!isActive) {
         item.classList.add('active');
         playTone(550, 'sine', 0.08);
