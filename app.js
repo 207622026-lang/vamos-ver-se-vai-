@@ -1,4 +1,4 @@
-// App Logic - Mindful Control & Resiliência (Portal Unificado)
+// App Logic - Um lugar para pensar (Portal Unificado)
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLoveAccordion();
   initDignityAccordion();
   initAutoAnalysisAccordion();
+  initDecisionAccordion();
   initDiaryLogs();
 });
 
@@ -231,10 +232,10 @@ function initCognitiveReframing() {
 }
 
 const learningQuotes = [
-  "A crise atual não descreve quem você é. Ela é apenas a matéria-prima com a qual você esculpirá a sua versão mais forte.",
-  "Encontrar um propósito na superação e decidir que uma crise não define o fim é o recurso mental mais poderoso contra a desesperança.",
-  "A transformação da dor em combustível para a mudança e a recusa em aceitar o sofrimento são atitudes de enorme coragem.",
-  "A dor atual é o teste de resiliência que pavimentará a bagagem de força que guiará você e outras pessoas no futuro."
+  "Você não precisa tirar uma lição de cada dia ruim. Às vezes, o seu único papel é apenas atravessar a exaustão.",
+  "Nem todo sofrimento ensina. Alguns apenas machucam. O valor de passar por uma crise está em sobreviver a ela, não em fingir que ela te fez melhor.",
+  "Você não precisa ser forte o tempo inteiro. Permitir-se cansar e aceitar a própria vulnerabilidade é uma forma de honestidade consigo mesmo.",
+  "A dor não é um teste de força e nem uma oportunidade de crescimento. Ela é apenas uma parte difícil da realidade com a qual precisamos aprender a conviver."
 ];
 
 function initLearningReflection() {
@@ -622,6 +623,7 @@ function initPhysiologyChecklist() {
 
 function initAccordion() {
   const items = document.querySelectorAll('#motivation-accordion .accordion-item');
+  if (!items || !items.length) return;
   
   items.forEach(item => {
     const trigger = item.querySelector('.accordion-trigger');
@@ -1661,6 +1663,22 @@ function initDignityAccordion() {
 
 function initAutoAnalysisAccordion() {
   const items = document.querySelectorAll('#auto-analysis-accordion .philosophy-item');
+  items.forEach(item => {
+    const trigger = item.querySelector('.philosophy-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      items.forEach(i => i.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+        playTone(550, 'sine', 0.08);
+      }
+    });
+  });
+}
+
+function initDecisionAccordion() {
+  const items = document.querySelectorAll('#decision-accordion .philosophy-item');
   items.forEach(item => {
     const trigger = item.querySelector('.philosophy-trigger');
     if (!trigger) return;
